@@ -11,8 +11,11 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
+        
+
         public IActionResult Index()
         {
+            ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
             return View();
         }
