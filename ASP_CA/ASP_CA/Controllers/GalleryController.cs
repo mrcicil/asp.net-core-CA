@@ -13,6 +13,7 @@ namespace ASP_CA.Controllers
     {
         
         //trying out commenting
+        //adding comment
         public IActionResult Index()
         {
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];

@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
+    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
+    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "projectUniqueName": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
         "projectName": "ASP_CA",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\obj\\",
+        "projectPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "packagesPath": "C:\\Users\\e0641583\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\e0641583\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
