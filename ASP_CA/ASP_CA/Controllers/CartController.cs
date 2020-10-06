@@ -5,11 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
+using System.Data.SqlClient;
+using Microsoft.CodeAnalysis;
 
 namespace ASP_CA.Controllers
 {
     public class CartController : Controller
     {
+        string connectionString =
+            "Server = (local);" +
+            "Database = ShoppingCartCA;" +
+            "Integrated Security = true";
+        
         // GET: CartController
         public ActionResult Index()
         {
@@ -83,6 +90,57 @@ namespace ASP_CA.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult PurchaseInformation(IFormCollection collection)
+        {
+            string order = Guid.NewGuid().ToString();
+            string orderid = order.Substring(1, 5);
+
+            ViewData["orderid"] = orderid;
+
+            string userid = collection["userid"];
+
+            ViewData["userid"] = userid;
+
+            List<string> productids = new List <string> (collection["productid"]);
+            ViewData["productids"] = productids;
+
+            List<string> activationCodes = new List<string>();
+
+            foreach (string productid in productids)
+            {
+                string code = Guid.NewGuid().ToString();
+                string activationcode = code.Substring(3, 12);
+
+                activationCodes.Add(activationcode);
+
+                /*
+                string sql = @"
+                    INSERT INTO ORDER (OrderId, UserId, ProductId, ActivationCode)
+                    VALUES(@orderid, @userid, @productid, @activationcode)";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@orderid", orderid);
+                    cmd.Parameters.AddWithValue("@userid", userid);
+                    cmd.Parameters.AddWithValue("@productid", productid);
+                    cmd.Parameters.AddWithValue("@activationcode", activationcode);
+
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                }*/
+
+            }
+
+            ViewData["ActivationCodes"] = activationCodes;
+
+            return View("PurchaseInfo");
         }
     }
 }

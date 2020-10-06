@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "PurchaseInfo";
+    string orderid = (string) ViewData["orderid"];
+    string userid = (string) ViewData["userid"];
+    List<string> productids = (List<string>)ViewData["productids"];
+    
+    List<string> activationcodes = (List<string>) ViewData["ActivationCodes"];
+
+
+}
+
+<h1>PurchaseInfo</h1>
+
+<table>
+    <tr>
+        <td>Order Id: </td>
+        <td>
+            <p>@orderid</p>
+        </td>
+    </tr>
+    <tr>
+        <td>User Id:</td>
+        <td>
+            <p>@userid</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Product Id: </td>
+    </tr>
+
+    @for(int i=0;i<productids.Count;i++)
+    {
+        <tr>
+            <td>@productids[i]</td>
+            <td>@activationcodes[i]</td>
+        </tr>
+    }
+</table>

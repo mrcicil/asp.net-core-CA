@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASP_CA.Models;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ASP_CA.Controllers
 {
@@ -50,8 +51,14 @@ namespace ASP_CA.Controllers
                 };
                 sessions.map[session.SessionId] = session;
 
+                ViewData["userid"] = user.UserId;
+
                 Response.Cookies.Append("sessionId", session.SessionId);
-                return RedirectToAction("Index", "Gallery");
+                
+                ViewData["header"] = "on";
+                ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
+
+                return View("Cart");
             }
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
