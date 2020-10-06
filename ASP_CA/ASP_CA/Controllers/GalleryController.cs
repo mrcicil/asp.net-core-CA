@@ -16,6 +16,7 @@ namespace ASP_CA.Controllers
         //adding comment
         public IActionResult Index()
         {
+            ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
             return View();
         }
