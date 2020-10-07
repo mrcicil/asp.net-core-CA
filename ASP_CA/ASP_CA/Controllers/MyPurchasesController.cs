@@ -6,18 +6,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
 using System.Data.SqlClient;
+using ASP_CA.Data;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ASP_CA.Controllers
 {
     public class MyPurchasesController : Controller
     {
-        private readonly User user;
         protected static readonly string connectionString = "data source=.; Database=ASP_CA; Integrated Security=true";
 
-        public MyPurchasesController(User user)
-        {
-            this.user = user;
-        }
 
         // GET: MyPurchasesController
         public ActionResult Index()
@@ -28,15 +25,20 @@ namespace ASP_CA.Controllers
 
         //POST from cart to push data into Order table
         [HttpPost]
-        public ActionResult PurchaseInformation(List<int>product)
+        public ActionResult PurchaseInformation(List<int>product, Sessions sessions)
         {
-            ViewData["product"] = product;
-            string userid = user.UserId;
+            string sessionid = HttpContext.Request.Cookies["sessionId"];
+            Session ses = sessions.map[sessionid];
+            int userid = ses.UserId;
+            string timestamp = ses.Timestamp.ToString();
 
-            string order = Guid.NewGuid().ToString();
-            string orderid = "OR000" + order.Substring(0, 7);
+            ViewData["product"] = product;
+            
+
+            int orderid = OrderData.GetLastOrderId() + 1;
 
             List<string> codelist = new List<string>();
+
 
             foreach (int id in product)
             {
@@ -45,22 +47,22 @@ namespace ASP_CA.Controllers
 
                 codelist.Add(activationcode);
 
-                /*
+                
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string sql = @"
-                            INSERT INTO Order (OrderId, UserId, ProductId, Timestamp, ActivationCode)
-                            VALUES (@OrderId, @UserId, @ProductId, @Timestamp, @ActivationCode)";
+                    string sql = @"INSERT INTO [Order] VALUES (@OrderId, @UserId, @ProductId, @Timestamp, @ActivationCode)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
+
                     cmd.Parameters.AddWithValue("@OrderId", orderid);
                     cmd.Parameters.AddWithValue("@UserId", userid);
                     cmd.Parameters.AddWithValue("@ProductId", id);
-                    cmd.Parameters.AddWithValue("@Timestamp", null);
+                    cmd.Parameters.AddWithValue("@Timestamp", timestamp);
                     cmd.Parameters.AddWithValue("@ActivationCode", activationcode);
 
                     cmd.ExecuteNonQuery();
-                }*/
+                    conn.Close();
+                }
             }
 
             ViewData["codelist"] = codelist;

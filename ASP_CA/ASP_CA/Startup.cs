@@ -25,13 +25,6 @@ namespace ASP_CA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            User user = new User
-            {
-                UserId = Guid.NewGuid().ToString(),
-                Username = "johndoe",
-                Password = "johndoe"
-            };
-            services.AddSingleton<User>(user);
             services.AddSingleton<Sessions>();
         }
 

@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASP_CA.Models;
+using ASP_CA.Data;
 
 namespace ASP_CA.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly User user;
         private readonly Sessions sessions;
 
-        public LoginController(User user, Sessions sessions)
+        public LoginController(Sessions sessions)
         {
-            this.user = user;
             this.sessions = sessions;
         }
 
@@ -30,7 +29,20 @@ namespace ASP_CA.Controllers
 
         public IActionResult Authenticate(string username, string password)
         {
-            
+            List<User> userlists = UserData.GetUserInfo();
+
+            User user = new User();
+
+            foreach(User u in userlists)
+            {
+                if (username == u.Username)
+                {
+                    user.Username = u.Username;
+                    user.Password = u.Password;
+                    user.UserId = u.UserId;
+                }
+            }
+
             if (username != user.Username && password != user.Password )
             {
                 // to highlight "Login" as the selected menu-item
