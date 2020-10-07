@@ -19,7 +19,7 @@ namespace ASP_CA.Controllers
             List<Product> products = ProductData.GetAllProducts();
 
             ViewData["products"] = products;
-
+            //testing 123
             ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
             return View();
