@@ -29,8 +29,10 @@ namespace ASP_CA.Controllers
             return View();
         }
 
-        public IActionResult Click()
+        [HttpPost]
+        public IActionResult Click(string productId)
         {
+            
             ViewData["quantity"] = click.press();
             Index();
             return View("Index");

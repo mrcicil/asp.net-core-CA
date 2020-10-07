@@ -1,38 +1,31 @@
-﻿
+﻿@model ASP_CA.Models.Click
+@using  ASP_CA.Controllers
 @{
     ViewData["Title"] = "Index";
-}
-
-@{
     var products = (List<Product>)ViewData["products"];
 }
 
+<form id="form" action="/Gallery/Click" method="post">
+    <input type="hidden" name="productId" value="Add To cart1" />
+    <input type="submit" value="Add To cart" />
+</form>
 
-<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Click">Name</a>
-
-<table align="center" border="1">
-    <tr>
-
-        <th>Name</th>
-
-    </tr>
 
     @foreach (var product in products)
     {
-        <tr>
+        <div>@product.ProductName</div>
 
-            <td>@product.ProductName</td>
-
-        </tr>
     }
-</table>
 
-@if (ViewData["quantity"] == null)
-{
-    <div>0</div>
-}
-else
-{
-    <div>@ViewData["quantity"]</div>
-}
+
+    @if (ViewData["quantity"] == null)
+    {
+        <div>0</div>
+    }
+    else
+    {
+        <div>@ViewData["quantity"]</div>
+    }
+
+
 
