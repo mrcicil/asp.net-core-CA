@@ -1,65 +1,31 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    string userid = (string) ViewData["userid"];
 }
 
-<h1>Cart</h1>
+@{
+    var products = (List<Product>)ViewData["products"];
+}
 
 
-<form id="cart" action="/Cart/PurchaseInformation" method="POST">
-    <table align="center">
+<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Click">Name</a>
+@if (ViewData["products"] != null)
+{
+    <table align="center" border="1">
         <tr>
-            <td colspan="3" align="left">
-                <p id="userid" name="userid" value="@userid">@userid</p>
-            </td>
+
+            <th>Name</th>
+
         </tr>
 
-        <tr>
-            <td>
-                <input type="checkbox" name="product" value="1"/>Product 1 
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="2"/>Product 2
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="3"/>Product 3
-            </td>
-        </tr>
+        @foreach (var product in products)
+        {
+            <tr>
 
-        <tr>
-            <td>
-                <input type="checkbox" name="product" value="4"/>Product 4
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="5"/>Product 5
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="6"/>Product 6
-            </td>
-        </tr>
+                <td>@product.ProductName</td>
 
-        <tr>
-            <td>
-                <input type="checkbox" name="product" value="7"/>Product 7
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="8"/>Product 8
-            </td>
-            <td>
-                <input type="checkbox" name="product" value="9"/>Product 9
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="3" align="center"><input type="submit" value="Submit"/></td>
-        </tr>
-    </table> 
-</form>
-
-<script>
-    var arr = [];
-    
-</script>
-
+            </tr>
+        }
+    </table>
+}
 
