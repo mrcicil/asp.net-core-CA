@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "PurchaseInfo";
+    List<int> product = (List<int>)ViewData["product"];
+    List<string> codelist = (List<string>) ViewData["codelist"];
+    string userid = (string)ViewData["userid"];
+    string orderid = (string)ViewData["orderid"];
+    }
+
+    <h1>PurchaseInfo</h1>
+
+    <p> <b>User ID:</b> &nbsp; &nbsp; @userid</p>
+    <p> <b>OrderID:</b> &nbsp; &nbsp; @orderid</p>
+
+    <table>
+        @for (int i = 0; i < product.Count; i++)
+        {
+            <tr>
+                <td width="22%">Product: </td>
+                <td width="20%">@product[i]</td>
+                <td width="30%">Act. Code: </td>
+                <td width="60%">@codelist[i]</td>
+            </tr>
+        }
+    </table>
+

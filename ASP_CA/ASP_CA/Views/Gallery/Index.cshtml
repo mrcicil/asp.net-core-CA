@@ -9,23 +9,35 @@
 
 
 <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Click">Name</a>
-@if (ViewData["products"] != null)
-{
-    <table align="center" border="1">
-        <tr>
 
-            <th>Name</th>
+<form id="form" action="/MyPurchases/PurchaseInformation" method="post">
 
-        </tr>
-
-        @foreach (var product in products)
-        {
+    @if (ViewData["products"] != null)
+    {
+        <table align="center" border="1">
             <tr>
 
-                <td>@product.ProductName</td>
+                <th>Name</th>
 
             </tr>
-        }
-    </table>
-}
 
+            @foreach (var product in products)
+            {
+                <tr>
+
+                    <td>
+                        <input type="checkbox" name="product" value="@product.ProductId" />@product.ProductId, @product.ProductName
+                    </td>
+
+                </tr>
+            }
+
+            <tr>
+                <td>
+                    <input type="submit" />
+                </td>
+            </tr>
+        </table>
+    }
+
+</form>
