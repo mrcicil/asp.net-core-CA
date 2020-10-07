@@ -12,14 +12,18 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
-        
+        private readonly Click click;
+
+        public GalleryController(Click click)
+        {
+            this.click = click;
+        }
 
         public IActionResult Index()
         {
             List<Product> products = ProductData.GetAllProducts();
 
             ViewData["products"] = products;
-            //testing 123
             ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
             return View();
@@ -27,8 +31,8 @@ namespace ASP_CA.Controllers
 
         public IActionResult Click()
         {
-
-            ViewData["products"] = null;
+            ViewData["quantity"] = click.press();
+            Index();
             return View("Index");
         }
 

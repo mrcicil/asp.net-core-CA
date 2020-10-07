@@ -9,23 +9,30 @@
 
 
 <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Click">Name</a>
-@if (ViewData["products"] != null)
-{
-    <table align="center" border="1">
+
+<table align="center" border="1">
+    <tr>
+
+        <th>Name</th>
+
+    </tr>
+
+    @foreach (var product in products)
+    {
         <tr>
 
-            <th>Name</th>
+            <td>@product.ProductName</td>
 
         </tr>
+    }
+</table>
 
-        @foreach (var product in products)
-        {
-            <tr>
-
-                <td>@product.ProductName</td>
-
-            </tr>
-        }
-    </table>
+@if (ViewData["quantity"] == null)
+{
+    <div>0</div>
+}
+else
+{
+    <div>@ViewData["quantity"]</div>
 }
 

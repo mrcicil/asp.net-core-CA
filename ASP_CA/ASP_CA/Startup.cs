@@ -33,6 +33,7 @@ namespace ASP_CA
             };
             services.AddSingleton<User>(user);
             services.AddSingleton<Sessions>();
+            services.AddSingleton<Click>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
