@@ -3,5 +3,24 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@{
+    var products = (List<Product>)ViewData["products"];
+}
 
+
+<table align="center" border="1">
+    <tr>
+        
+        <th>Name</th>
+        
+    </tr>
+
+    @foreach (var product in products)
+    {
+        <tr>
+            
+            <td>@product.ProductName</td>
+            
+        </tr>
+    }
+</table>

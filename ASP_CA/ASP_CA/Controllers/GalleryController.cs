@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASP_CA.Models;
+using ASP_CA.Data;
 
 namespace ASP_CA.Controllers
 {
@@ -15,6 +16,10 @@ namespace ASP_CA.Controllers
 
         public IActionResult Index()
         {
+            List<Product> products = ProductData.GetAllProducts();
+
+            ViewData["products"] = products;
+
             ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
             return View();

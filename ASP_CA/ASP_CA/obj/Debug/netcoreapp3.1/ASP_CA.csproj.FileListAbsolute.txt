@@ -105,6 +105,12 @@ C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netco
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Gallery\Index.cshtml.g.cs
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CoreCompileInputs.cache
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Gallery\Index.cshtml.g.cs
