@@ -8,19 +8,24 @@
 }
 
 
-<table align="center" border="1">
-    <tr>
-        
-        <th>Name</th>
-        
-    </tr>
-
-    @foreach (var product in products)
-    {
+<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Click">Name</a>
+@if (ViewData["products"] != null)
+{
+    <table align="center" border="1">
         <tr>
-            
-            <td>@product.ProductName</td>
-            
+
+            <th>Name</th>
+
         </tr>
-    }
-</table>
+
+        @foreach (var product in products)
+        {
+            <tr>
+
+                <td>@product.ProductName</td>
+
+            </tr>
+        }
+    </table>
+}
+

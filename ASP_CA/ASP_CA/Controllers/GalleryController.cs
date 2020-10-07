@@ -25,7 +25,12 @@ namespace ASP_CA.Controllers
             return View();
         }
 
-        
+        public IActionResult Click()
+        {
+
+            ViewData["products"] = null;
+            return View("Index");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
