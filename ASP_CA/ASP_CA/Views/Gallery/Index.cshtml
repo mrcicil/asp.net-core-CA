@@ -14,6 +14,9 @@ else
     <div>@ViewData["quantity"]</div>
 }
 
+<div class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Delete">ClearCart</a>
+</div>
 @foreach (var product in products)
 {
     <form id="form" action="/Gallery/Click" method="post">

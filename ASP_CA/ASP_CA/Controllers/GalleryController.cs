@@ -39,6 +39,14 @@ namespace ASP_CA.Controllers
             return View("Index");
         }
 
+        public IActionResult ClearCart()
+        {
+            CartData.ClearCart();
+            ViewData["quantity"] = null;
+            Index();
+            return View("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

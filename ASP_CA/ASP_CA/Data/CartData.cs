@@ -29,6 +29,25 @@ namespace ASP_CA.Data
 
 
         }
-        
+
+        public static void ClearCart()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"DELETE FROM Cart";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+             
+
+                cmd.ExecuteNonQuery();
+            }
+
+
+
+
+        }
+
     }
 }
