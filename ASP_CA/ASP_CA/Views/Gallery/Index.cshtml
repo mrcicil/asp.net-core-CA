@@ -5,7 +5,7 @@
     var products = (List<Product>)ViewData["products"];
    
 }
-<div>Cart</div>
+<a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
 @if (ViewData["quantity"] == null)
 {
     <div>0</div>
@@ -15,16 +15,16 @@ else
     <div>@ViewData["quantity"]</div>
 }
 
-<div class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Delete">ClearCart</a>
-</div>
 @foreach (var product in products)
 {
     <form id="form" action="/Gallery/Click" method="post">
-        <input type="text" name="productId" value="@product.ProductName" />
+        <input type="hidden" name="productId" value="@product.ProductId" />
+        <input type="text" value="@product.ProductName" />
         <input type="submit" value="Add To cart" />
     </form>
 }
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Cart</a>
 
 
 

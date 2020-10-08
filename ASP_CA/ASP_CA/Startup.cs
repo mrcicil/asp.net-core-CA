@@ -25,6 +25,7 @@ namespace ASP_CA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<UserIdCookies>();
             services.AddSingleton<Sessions>();
             services.AddSingleton<Click>();
         }

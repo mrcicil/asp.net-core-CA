@@ -32,9 +32,10 @@ namespace ASP_CA.Controllers
         [HttpPost]
         public IActionResult Click(string productId)
         {
-            
+
+            int userId = Convert.ToInt32(HttpContext.Request.Cookies["UserId"]);
             ViewData["quantity"] = click.press();
-            CartData.AddToCart(Convert.ToInt32(productId));
+            CartData.AddToCart(userId, Convert.ToInt32(productId));
             Index();
             return View("Index");
         }

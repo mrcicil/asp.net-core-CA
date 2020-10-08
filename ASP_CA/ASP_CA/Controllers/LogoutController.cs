@@ -11,7 +11,6 @@ namespace ASP_CA.Controllers
     {
         public IActionResult Index(Sessions sessions)
         {
-            
             string sessionId = HttpContext.Request.Cookies["sessionId"];
             sessions.map.Remove(sessionId);
             HttpContext.Response.Cookies.Delete("sessionId");

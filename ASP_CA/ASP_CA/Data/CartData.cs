@@ -8,18 +8,17 @@ namespace ASP_CA.Data
 {
     public class CartData : Data
     {
-        public static void AddToCart(int ProductId)
+        public static void AddToCart(int userid, int ProductId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"INSERT INTO Cart (CartId, UserId, ProductId)
-                            VALUES (@CartId, @UserId, @ProductId)";
+                string sql = @"INSERT INTO Cart (UserId, ProductId)
+                            VALUES (@UserId, @ProductId)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@CartId", ProductId);
-                cmd.Parameters.AddWithValue("@UserId", ProductId);
+                cmd.Parameters.AddWithValue("@UserId", userid);
                 cmd.Parameters.AddWithValue("@ProductId", ProductId);
 
                 cmd.ExecuteNonQuery();

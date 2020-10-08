@@ -13,10 +13,12 @@ namespace ASP_CA.Controllers
     public class LoginController : Controller
     {
         private readonly Sessions sessions;
+        private readonly UserIdCookies userIdCookies;
 
-        public LoginController(Sessions sessions)
+        public LoginController(Sessions sessions, UserIdCookies userIdCookies)
         {
             this.sessions = sessions;
+            this.userIdCookies = userIdCookies;
         }
 
         public IActionResult Index()
@@ -24,7 +26,15 @@ namespace ASP_CA.Controllers
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
 
-            return View();
+            if (HttpContext.Request.Cookies["sessionId"] == null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Logout");
+            }
+            
         }
 
         public IActionResult Authenticate(string username, string password)
@@ -60,8 +70,10 @@ namespace ASP_CA.Controllers
                     Timestamp = DateTimeOffset.Now.ToUnixTimeSeconds()
                 };
                 sessions.map[session.SessionId] = session;
+                userIdCookies.map[session.UserId] = session;
 
                 Response.Cookies.Append("sessionId", session.SessionId);
+                Response.Cookies.Append("UserId", Convert.ToString(session.UserId));
                 return RedirectToAction("Index", "Gallery");
             }
         }
