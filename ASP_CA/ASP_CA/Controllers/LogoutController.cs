@@ -15,7 +15,7 @@ namespace ASP_CA.Controllers
             string sessionId = HttpContext.Request.Cookies["sessionId"];
             sessions.map.Remove(sessionId);
             HttpContext.Response.Cookies.Delete("sessionId");
-            return RedirectToAction("Index", "Gallery");
+            return RedirectToAction("Index", "Login");
         }
     }
 }

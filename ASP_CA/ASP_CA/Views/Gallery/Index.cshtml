@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     var products = (List<Product>)ViewData["products"];
+   
 }
 <div>Cart</div>
 @if (ViewData["quantity"] == null)
@@ -20,7 +21,7 @@ else
 @foreach (var product in products)
 {
     <form id="form" action="/Gallery/Click" method="post">
-        <input type="text" name="productId" value="@product.ProductId" />
+        <input type="text" name="productId" value="@product.ProductName" />
         <input type="submit" value="Add To cart" />
     </form>
 }

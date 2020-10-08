@@ -22,7 +22,7 @@ namespace ASP_CA.Controllers
         public IActionResult Index()
         {
             List<Product> products = ProductData.GetAllProducts();
-
+          
             ViewData["products"] = products;
             ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];

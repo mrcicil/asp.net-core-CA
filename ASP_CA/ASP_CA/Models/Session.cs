@@ -8,7 +8,7 @@ namespace ASP_CA.Models
     public class Session
     {
         public string SessionId { get; set; }
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         public long Timestamp { get; set; }
     }
