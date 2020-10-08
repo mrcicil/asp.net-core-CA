@@ -25,6 +25,7 @@ namespace ASP_CA.Controllers
         {
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
+            CartData.ClearTempCart();
 
             if (HttpContext.Request.Cookies["sessionId"] == null)
             {

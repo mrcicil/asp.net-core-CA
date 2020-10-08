@@ -6,14 +6,8 @@
    
 }
 <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
-@if (ViewData["quantity"] == null)
-{
-    <div>0</div>
-}
-else
-{
-    <div>@ViewData["quantity"]</div>
-}
+
+<div>@ViewData["quantity"]</div>
 
 @foreach (var product in products)
 {
@@ -24,7 +18,7 @@ else
     </form>
 }
 
-<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Cart</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Clear Cart</a>
 
 
 

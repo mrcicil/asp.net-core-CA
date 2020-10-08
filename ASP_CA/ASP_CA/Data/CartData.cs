@@ -23,10 +23,22 @@ namespace ASP_CA.Data
 
                 cmd.ExecuteNonQuery();
             }
+        }
 
+        public static void AddToTempCart(int ProductId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"INSERT INTO TempCart (ProductId)
+                            VALUES (@ProductId)";
 
+                SqlCommand cmd = new SqlCommand(sql, conn);
 
+                cmd.Parameters.AddWithValue("@ProductId", ProductId);
 
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static void ClearCart()
@@ -37,15 +49,46 @@ namespace ASP_CA.Data
                 string sql = @"DELETE FROM Cart";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-             
-
                 cmd.ExecuteNonQuery();
             }
+        }
 
+        public static void ClearTempCart()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"DELETE FROM TempCart";
 
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
 
+        public static int QuantityCart(string userid)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"SELECT COUNT(*) FROM Cart WHERE UserId = " + userid;
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                
+                int x = (int)cmd.ExecuteScalar();
+                return x;
+            }
+        }
 
+        public static int QuantityTempCart()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"SELECT COUNT(*) FROM TempCart";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                int x = (int)cmd.ExecuteScalar();
+                return x;
+            }
         }
 
     }

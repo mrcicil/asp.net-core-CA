@@ -26,23 +26,45 @@ namespace ASP_CA.Controllers
             ViewData["products"] = products;
             ViewData["header"] = "on";
             ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
-            return View();
+            if (ViewData["sessionId"] == null)
+            {
+                int quantity = CartData.QuantityTempCart();
+                ViewData["quantity"] = quantity;
+                return View();
+            }
+            else
+            {
+                int quantity = CartData.QuantityCart((HttpContext.Request.Cookies["UserId"]));
+                ViewData["quantity"] = quantity;
+                return View();
+            }
+            
         }
 
         [HttpPost]
         public IActionResult Click(string productId)
         {
-
-            int userId = Convert.ToInt32(HttpContext.Request.Cookies["UserId"]);
-            ViewData["quantity"] = click.press();
-            CartData.AddToCart(userId, Convert.ToInt32(productId));
-            Index();
-            return View("Index");
+            ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
+            if (ViewData["sessionId"] == null)
+            {
+                CartData.AddToTempCart(Convert.ToInt32(productId));
+                Index();
+                return View("Index");
+            }
+            else
+            {
+                int userId = Convert.ToInt32(HttpContext.Request.Cookies["UserId"]);
+                CartData.AddToCart(userId, Convert.ToInt32(productId));
+                Index();
+                return View("Index");
+            } 
         }
 
         public IActionResult ClearCart()
         {
+            
             CartData.ClearCart();
+            CartData.ClearTempCart();
             ViewData["quantity"] = null;
             Index();
             return View("Index");

@@ -9,11 +9,14 @@ namespace ASP_CA.Controllers
 {
     public class LogoutController : Controller
     {
-        public IActionResult Index(Sessions sessions)
+        public IActionResult Index(Sessions sessions, UserIdCookies userIdCookies)
         {
             string sessionId = HttpContext.Request.Cookies["sessionId"];
             sessions.map.Remove(sessionId);
             HttpContext.Response.Cookies.Delete("sessionId");
+            string Userid = HttpContext.Request.Cookies["UserId"];
+            userIdCookies.map.Remove(Convert.ToInt32(Userid));
+            HttpContext.Response.Cookies.Delete("UserId");
             return RedirectToAction("Index", "Login");
         }
     }
