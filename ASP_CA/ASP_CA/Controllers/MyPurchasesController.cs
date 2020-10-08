@@ -8,13 +8,19 @@ using ASP_CA.Models;
 using System.Data.SqlClient;
 using ASP_CA.Data;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ASP_CA.Controllers
 {
     public class MyPurchasesController : Controller
     {
         protected static readonly string connectionString = "data source=.; Database=ASP_CA; Integrated Security=true";
+        public User user;
 
+        public MyPurchasesController(User user)
+        {
+            this.user = user;
+        }
 
         // GET: MyPurchasesController
         public ActionResult Index()
@@ -25,12 +31,12 @@ namespace ASP_CA.Controllers
 
         //POST from cart to push data into Order table
         [HttpPost]
-        public ActionResult PurchaseInformation(List<int>product, Sessions sessions)
+        public ActionResult PurchaseInformation(List<int>product)
         {
-            string sessionid = HttpContext.Request.Cookies["sessionId"];
-            Session ses = sessions.map[sessionid];
-            int userid = ses.UserId;
-            string timestamp = ses.Timestamp.ToString();
+            
+            int userid = user.UserId;
+            
+            long timestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 
             ViewData["product"] = product;
             

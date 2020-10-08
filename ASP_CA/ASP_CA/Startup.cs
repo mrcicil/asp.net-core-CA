@@ -26,6 +26,7 @@ namespace ASP_CA
         {
             services.AddControllersWithViews();
             services.AddSingleton<Sessions>();
+            services.AddSingleton<User>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
