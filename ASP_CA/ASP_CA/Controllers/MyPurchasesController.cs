@@ -15,11 +15,11 @@ namespace ASP_CA.Controllers
     public class MyPurchasesController : Controller
     {
         protected static readonly string connectionString = "data source=.; Database=ASP_CA; Integrated Security=true";
-        public User user;
+        public Sessions sessions;
 
-        public MyPurchasesController(User user)
+        public MyPurchasesController(Sessions sessions)
         {
-            this.user = user;
+            this.sessions = sessions;
         }
 
         // GET: MyPurchasesController
@@ -33,14 +33,15 @@ namespace ASP_CA.Controllers
         [HttpPost]
         public ActionResult PurchaseInformation(List<int>product)
         {
-            
-            int userid = user.UserId;
-            
-            long timestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
+            Session session = null;
+            string sessionId = HttpContext.Request.Cookies["sessionId"];
+
+            sessions.map.TryGetValue(sessionId, out session);
 
             ViewData["product"] = product;
-            
 
+            int userid = session.UserId;
+            long timestamp = session.Timestamp;
             int orderid = OrderData.GetLastOrderId() + 1;
 
             List<string> codelist = new List<string>();

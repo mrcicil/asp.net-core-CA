@@ -13,12 +13,10 @@ namespace ASP_CA.Controllers
     public class LoginController : Controller
     {
         private readonly Sessions sessions;
-        public User user;
 
-        public LoginController(Sessions sessions, User user)
+        public LoginController(Sessions sessions)
         {
             this.sessions = sessions;
-            this.user = user;
         }
 
         public IActionResult Index()
@@ -32,6 +30,8 @@ namespace ASP_CA.Controllers
         public IActionResult Authenticate(string username, string password)
         {
             List<User> userlists = UserData.GetUserInfo();
+
+            User user = new User();
 
             foreach(User u in userlists)
             {
@@ -58,7 +58,8 @@ namespace ASP_CA.Controllers
                 {
                     SessionId = Guid.NewGuid().ToString(),
                     UserId = user.UserId,
-                };
+                    Timestamp = DateTimeOffset.Now.ToUnixTimeSeconds()
+            };
                 sessions.map[session.SessionId] = session;
 
                 Response.Cookies.Append("sessionId", session.SessionId);
