@@ -5,12 +5,15 @@
     List<string> codelist = (List<string>) ViewData["codelist"];
     int userid = (int)ViewData["userid"];
     int orderid = (int)ViewData["orderid"];
+    string timestamp = (string)ViewData["timestamp"];
     }
 
     <h1>PurchaseInfo</h1>
 
     <p> <b>User ID:</b> &nbsp; &nbsp; @userid</p>
     <p> <b>OrderID:</b> &nbsp; &nbsp; @orderid</p>
+    <p> <b>Date :</b> &nbsp; &nbsp; @timestamp</p></p>
+
 
     <table>
         @for (int i = 0; i < product.Count; i++)

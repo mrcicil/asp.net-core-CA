@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
+    string error = (string)ViewData["error"];
 }
 
 @{
@@ -38,6 +39,9 @@
                 </td>
             </tr>
         </table>
+        <p> </p>
+
+        <p align="center" style="font-weight:bold;font-size:12px;color:red">@error</p>
     }
 
 </form>

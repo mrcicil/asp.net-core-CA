@@ -36,12 +36,20 @@ namespace ASP_CA.Controllers
             Session session = null;
             string sessionId = HttpContext.Request.Cookies["sessionId"];
 
-            sessions.map.TryGetValue(sessionId, out session);
+            ViewData["sessionId"] = sessionId;
+
+            if (sessionId == null)
+            {
+                var o = new { error = "Please login before checking out" };
+                return RedirectToAction("Index", "Gallery", o);
+            }
+            else
+                sessions.map.TryGetValue(sessionId, out session);
 
             ViewData["product"] = product;
 
             int userid = session.UserId;
-            long timestamp = session.Timestamp;
+            string timestamp = DateTime.Now.ToString();
             int orderid = OrderData.GetLastOrderId() + 1;
 
             List<string> codelist = new List<string>();
@@ -75,6 +83,7 @@ namespace ASP_CA.Controllers
             ViewData["codelist"] = codelist;
             ViewData["userid"] = userid;
             ViewData["orderid"] = orderid;
+            ViewData["timestamp"] = timestamp;
 
             return View("PurchaseInfo");
         }

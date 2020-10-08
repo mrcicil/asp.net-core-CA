@@ -10,6 +10,6 @@ namespace ASP_CA.Models
         public string SessionId { get; set; }
         public int UserId { get; set; }
 
-        public long Timestamp { get; set; }
+        public string Timestamp { get; set; }
     }
 }

@@ -11,8 +11,16 @@ namespace ASP_CA.Controllers
     {
         public IActionResult Index(Sessions sessions)
         {
-            
             string sessionId = HttpContext.Request.Cookies["sessionId"];
+            Session session = null;
+            if (sessionId != null)
+                sessions.map.TryGetValue(sessionId, out session);
+
+            if (session == null && sessionId != null)
+            {
+                HttpContext.Response.Cookies.Delete("sessionId");
+            }
+
             sessions.map.Remove(sessionId);
             HttpContext.Response.Cookies.Delete("sessionId");
             return RedirectToAction("Index", "Gallery");

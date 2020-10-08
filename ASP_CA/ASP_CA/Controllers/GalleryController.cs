@@ -12,16 +12,27 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
-        
-
-        public IActionResult Index()
+        public IActionResult Index(string error, Sessions sessions)
         {
+            string sessionId = HttpContext.Request.Cookies["sessionId"];
+            Session session = null;
+            if (sessionId != null)
+                sessions.map.TryGetValue(sessionId, out session);
+
+            if (session == null && sessionId != null)
+            {
+                HttpContext.Response.Cookies.Delete("sessionId");
+            }
+
             List<Product> products = ProductData.GetAllProducts();
 
             ViewData["products"] = products;
 
             ViewData["header"] = "on";
-            ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
+            ViewData["sessionId"] = sessionId;
+
+            ViewData["error"] = error;
+            
             return View();
         }
 

@@ -21,14 +21,39 @@ namespace ASP_CA.Controllers
 
         public IActionResult Index()
         {
+            string sessionId = HttpContext.Request.Cookies["sessionId"];
+            Session session = null;
+            if (sessionId != null)
+                sessions.map.TryGetValue(sessionId, out session);
+
+            if (session == null && sessionId != null) 
+            {
+                HttpContext.Response.Cookies.Delete("sessionId");
+            }
+
+
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
 
-            return View();
+            if (HttpContext.Request.Cookies["sessionId"] == null)
+                return View();
+
+            return RedirectToAction("Index", "Logout");
         }
 
         public IActionResult Authenticate(string username, string password)
         {
+            string sessionId = HttpContext.Request.Cookies["sessionId"];
+            Session value = null;
+            if (sessionId != null)
+                sessions.map.TryGetValue(sessionId, out value);
+
+            if (value == null && sessionId != null)
+            {
+                HttpContext.Response.Cookies.Delete("sessionId");
+            }
+
+
             List<User> userlists = UserData.GetUserInfo();
 
             User user = new User();
@@ -48,7 +73,6 @@ namespace ASP_CA.Controllers
                 // to highlight "Login" as the selected menu-item
                 ViewData["Is_Login"] = "menu_hilite";
 
-                ViewData["errMsg"] = "No such user or incorrect password.";
                 return View("Index");
             }
             else
@@ -58,11 +82,12 @@ namespace ASP_CA.Controllers
                 {
                     SessionId = Guid.NewGuid().ToString(),
                     UserId = user.UserId,
-                    Timestamp = DateTimeOffset.Now.ToUnixTimeSeconds()
+
             };
                 sessions.map[session.SessionId] = session;
 
                 Response.Cookies.Append("sessionId", session.SessionId);
+
                 return RedirectToAction("Index", "Gallery");
             }
         }
