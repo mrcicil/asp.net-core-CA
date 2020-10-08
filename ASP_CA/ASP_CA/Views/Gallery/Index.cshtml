@@ -4,28 +4,26 @@
     ViewData["Title"] = "Index";
     var products = (List<Product>)ViewData["products"];
 }
+<div>Cart</div>
+@if (ViewData["quantity"] == null)
+{
+    <div>0</div>
+}
+else
+{
+    <div>@ViewData["quantity"]</div>
+}
 
-<form id="form" action="/Gallery/Click" method="post">
-    <input type="hidden" name="productId" value="Add To cart1" />
-    <input type="submit" value="Add To cart" />
-</form>
+@foreach (var product in products)
+{
+    <form id="form" action="/Gallery/Click" method="post">
+        <input type="text" name="productId" value="@product.ProductId" />
+        <input type="submit" value="Add To cart" />
+    </form>
+}
 
 
-    @foreach (var product in products)
-    {
-        <div>@product.ProductName</div>
 
-    }
-
-
-    @if (ViewData["quantity"] == null)
-    {
-        <div>0</div>
-    }
-    else
-    {
-        <div>@ViewData["quantity"]</div>
-    }
 
 
 

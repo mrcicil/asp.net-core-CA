@@ -34,6 +34,7 @@ namespace ASP_CA.Controllers
         {
             
             ViewData["quantity"] = click.press();
+            CartData.AddToCart(Convert.ToInt32(productId));
             Index();
             return View("Index");
         }
