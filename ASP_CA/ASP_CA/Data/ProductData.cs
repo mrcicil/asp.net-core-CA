@@ -27,6 +27,7 @@ namespace ASP_CA.Data
                     {
                         ProductId = (int)reader["ProductId"],
                         ProductName = (string)reader["ProductName"],
+                        //testing testing
                         ProductDesc = (string)reader["ProductDesc"],
                         ProductPrice = (int)reader["ProductPrice"]
                     };
