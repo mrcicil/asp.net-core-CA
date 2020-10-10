@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
+using ASP_CA.Data;
 
 namespace ASP_CA.Controllers
 {
@@ -13,6 +14,8 @@ namespace ASP_CA.Controllers
         // GET: CartController
         public ActionResult Index()
         {
+            ViewData["AllTotalPrice"] = CartData.TotalPrice();
+            ViewData["ViewCart"] = CartData.ViewCart();
             return View();
         }
 
