@@ -12,22 +12,12 @@ namespace ASP_CA.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly Sessions sessions;
-        private readonly UserIdCookies userIdCookies;
-
-        public LoginController(Sessions sessions, UserIdCookies userIdCookies)
-        {
-            this.sessions = sessions;
-            this.userIdCookies = userIdCookies;
-        }
-
         public IActionResult Index()
         {
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
-            CartData.ClearTempCart();
-
-            if (HttpContext.Request.Cookies["sessionId"] == null)
+            CartData.ClearCart();
+            if (Request.Cookies["Name"] == null)
             {
                 return View();
             }
@@ -35,20 +25,19 @@ namespace ASP_CA.Controllers
             {
                 return RedirectToAction("Index", "Logout");
             }
-            
         }
 
         public IActionResult Authenticate(string username, string password)
         {
             List<User> userlists = UserData.GetUserInfo();
-
             User user = new User();
-
+            
             foreach (User u in userlists)
             {
                 if (username == u.Username)
                 {
                     user.Username = u.Username;
+                    user.Name = u.Name;
                     user.Password = u.Password;
                     user.UserId = u.UserId;
                 }
@@ -63,25 +52,12 @@ namespace ASP_CA.Controllers
             }
             else
             {
-                // use a session to track this user
-                Session session = new Session()
-                {
-                    SessionId = Guid.NewGuid().ToString(),
-                    UserId = user.UserId,
-                    Timestamp = DateTimeOffset.Now.ToUnixTimeSeconds()
-                };
-                sessions.map[session.SessionId] = session;
-                userIdCookies.map[session.UserId] = session;
-
-                Response.Cookies.Append("sessionId", session.SessionId);
-                Response.Cookies.Append("UserId", Convert.ToString(session.UserId));
+                string userIdCookie = user.UserId.ToString();
+                string nameCookie = user.Name;
+                Response.Cookies.Append("userId", userIdCookie);
+                Response.Cookies.Append("Name", nameCookie);
                 return RedirectToAction("Index", "Gallery");
             }
-        }
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

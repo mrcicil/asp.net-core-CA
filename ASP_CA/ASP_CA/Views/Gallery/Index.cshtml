@@ -5,18 +5,24 @@
     var products = (List<Product>)ViewData["products"];
    
 }
-<a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
+@*<a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>*@
 
 <div>@ViewData["quantity"]</div>
 
+<div>Welcome @ViewData["greeting"]</div>
+
 @foreach (var product in products)
 {
-    <form id="form" action="/Gallery/Click" method="post">
-        <input type="hidden" name="productId" value="@product.ProductId" />
-        <input type="text" value="@product.ProductName" />
-        <input type="submit" value="Add To cart" />
-    </form>
+<form id="form" action="/Gallery/Click" method="post">
+    <input type="hidden" name="productId" value="@product.ProductId" />
+    <input type="text" value="@product.ProductName" />
+    <input type="text" value="@product.ProductDesc" />
+    <input type="text" value="@product.ProductPrice" />
+    <input type="submit" value="Add To cart" />
+</form>
 }
+
+
 
 <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Clear Cart</a>
 

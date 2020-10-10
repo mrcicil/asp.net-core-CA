@@ -25,46 +25,36 @@ namespace ASP_CA.Controllers
           
             ViewData["products"] = products;
             ViewData["header"] = "on";
-            ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
-            if (ViewData["sessionId"] == null)
+            ViewData["Name"] = Request.Cookies["Name"];
+            int quantity = CartData.QuantityCart();
+            ViewData["quantity"] = quantity;
+            if (ViewData["Name"] == null)
             {
-                int quantity = CartData.QuantityTempCart();
-                ViewData["quantity"] = quantity;
+                ViewData["greeting"] = "guest";
                 return View();
             }
             else
             {
-                int quantity = CartData.QuantityCart((HttpContext.Request.Cookies["UserId"]));
-                ViewData["quantity"] = quantity;
+                ViewData["greeting"] = Request.Cookies["Name"];
                 return View();
             }
             
+            //testing
         }
 
         [HttpPost]
-        public IActionResult Click(string productId)
+       public IActionResult Click(string productId)
         {
-            ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
-            if (ViewData["sessionId"] == null)
-            {
-                CartData.AddToTempCart(Convert.ToInt32(productId));
+                CartData.AddToCart(productId);
                 Index();
                 return View("Index");
-            }
-            else
-            {
-                int userId = Convert.ToInt32(HttpContext.Request.Cookies["UserId"]);
-                CartData.AddToCart(userId, Convert.ToInt32(productId));
-                Index();
-                return View("Index");
-            } 
+           
         }
 
         public IActionResult ClearCart()
         {
             
             CartData.ClearCart();
-            CartData.ClearTempCart();
             ViewData["quantity"] = null;
             Index();
             return View("Index");

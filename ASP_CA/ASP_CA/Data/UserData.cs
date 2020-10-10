@@ -16,7 +16,7 @@ namespace ASP_CA.Data
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"SELECT userid, username, password FROM [USER]";
+                string sql = @"SELECT userid, name, username, password FROM [USER]";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -25,6 +25,7 @@ namespace ASP_CA.Data
                     User user = new User()
                     {
                         UserId = (int)reader["UserId"],
+                        Name = (string)reader["Name"],
                         Username = (string)reader["Username"],
                         Password = (string)reader["Password"]
                     };

@@ -8,34 +8,18 @@ namespace ASP_CA.Data
 {
     public class CartData : Data
     {
-        public static void AddToCart(int userid, int ProductId)
+        public static void AddToCart(string ProductId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"INSERT INTO Cart (UserId, ProductId)
-                            VALUES (@UserId, @ProductId)";
+                string sql = @"Update Cart2
+                                set quantity = quantity + 1
+                                where productid = " + ProductId +
+                                "Update Cart2 " +
+                                "set totalprice = quantity * productprice";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue("@UserId", userid);
-                cmd.Parameters.AddWithValue("@ProductId", ProductId);
-
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        public static void AddToTempCart(int ProductId)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                string sql = @"INSERT INTO TempCart (ProductId)
-                            VALUES (@ProductId)";
-
-                SqlCommand cmd = new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue("@ProductId", ProductId);
 
                 cmd.ExecuteNonQuery();
             }
@@ -46,46 +30,24 @@ namespace ASP_CA.Data
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"DELETE FROM Cart";
+                string sql = @"UPDATE Cart2
+                            SET Quantity = 0 
+                            UPDATE Cart2
+                            SET TotalPrice = 0";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
         }
 
-        public static void ClearTempCart()
+        public static int QuantityCart()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"DELETE FROM TempCart";
-
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        public static int QuantityCart(string userid)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                string sql = @"SELECT COUNT(*) FROM Cart WHERE UserId = " + userid;
+                string sql = @"SELECT SUM(quantity) FROM Cart2";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 
-                int x = (int)cmd.ExecuteScalar();
-                return x;
-            }
-        }
-
-        public static int QuantityTempCart()
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                string sql = @"SELECT COUNT(*) FROM TempCart";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-
                 int x = (int)cmd.ExecuteScalar();
                 return x;
             }
