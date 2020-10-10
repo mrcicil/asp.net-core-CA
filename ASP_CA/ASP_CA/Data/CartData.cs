@@ -68,7 +68,7 @@ namespace ASP_CA.Data
             }
         }
 
-        public static List<CartProduct> ViewCart()
+        /*public static List<CartProduct> ViewCart()
         {
             List<Product> products = ProductData.GetAllProducts();
 
@@ -108,7 +108,7 @@ namespace ASP_CA.Data
                     
                 }return cartProducts;
             }
-        }
+        }*/
 
     }
 }

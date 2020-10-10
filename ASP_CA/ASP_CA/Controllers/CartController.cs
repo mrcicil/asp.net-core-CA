@@ -14,8 +14,8 @@ namespace ASP_CA.Controllers
         // GET: CartController
         public ActionResult Index()
         {
-            ViewData["AllTotalPrice"] = CartData.TotalPrice();
-            ViewData["ViewCart"] = CartData.ViewCart();
+            /*ViewData["AllTotalPrice"] = CartData.TotalPrice();
+            ViewData["ViewCart"] = CartData.ViewCart();*/
             return View();
         }
 
