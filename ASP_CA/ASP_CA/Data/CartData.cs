@@ -106,5 +106,21 @@ namespace ASP_CA.Data
             }
         }
 
+        public static void PlusOneInCart(string productId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"UPDATE Cart2 
+                             SET Quantity = Quantity + 1
+                              WHERE ProductId = " + productId +
+                              "UPDATE Cart2 " +
+                               "SET TotalPrice = Quantity * ProductPrice " +
+                               "WHERE ProductId = " + productId;
+                
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

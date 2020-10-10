@@ -10,6 +10,10 @@
     table, th, tr {
         border: 1px solid black;
     }
+
+    .btn {
+        background: white;
+    }
 </style>
 
 <div>Total Price: $@ViewData["AllTotalPrice"]</div>
@@ -33,9 +37,15 @@
     {
         <tr>
             <th>@product.ProductName</th>
-            <th>@product.ProductPrice</th>
+            <th>$@product.ProductPrice</th>
             <th>@product.ProductQuantity</th>
-            <th>@product.ProductTotal</th>
+            <th>$@product.ProductTotal</th>
+            <th>
+                <form id="form" action="/Cart/PlusOne" method="post">
+                <input type="hidden" name="productId" value="@product.ProductId" />
+                <input class="btn" type="submit" value="+" />
+                </form>
+            </th>
         </tr>
     }
 </table>

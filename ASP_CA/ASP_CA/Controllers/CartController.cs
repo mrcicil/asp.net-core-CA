@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
 using ASP_CA.Data;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace ASP_CA.Controllers
 {
@@ -19,6 +20,14 @@ namespace ASP_CA.Controllers
             Response.Cookies.Delete("Fromgallery");
             Response.Cookies.Append("Fromcart", "timer");
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult PlusOne(string productId)
+        {
+            CartData.PlusOneInCart(productId);
+            Index();
+            return View("Index");   
         }
     }
 }
