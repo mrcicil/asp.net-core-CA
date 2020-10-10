@@ -12,13 +12,6 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
-        private readonly Click click;
-
-        public GalleryController(Click click)
-        {
-            this.click = click;
-        }
-
         public IActionResult Index()
         {
             List<Product> products = ProductData.GetAllProducts();
@@ -38,8 +31,6 @@ namespace ASP_CA.Controllers
                 ViewData["greeting"] = Request.Cookies["Name"];
                 return View();
             }
-            
-            //testing
         }
 
         [HttpPost]
@@ -48,8 +39,43 @@ namespace ASP_CA.Controllers
                 CartData.AddToCart(productId);
                 Index();
                 return View("Index");
-           
         }
+
+        [HttpPost]
+        public IActionResult Search(string search)
+        {
+            List<Product> products = ProductData.GetAllProducts();
+
+            List<Product> searchedproducts = new List<Product>();
+
+            
+            string lowersearch = (search.TrimEnd()).ToLower();
+
+            foreach(var product in products)
+            {
+                if (product.ProductName.ToLower().Contains(lowersearch) | product.ProductDesc.ToLower().Contains(lowersearch) | product.ProductPrice.ToString().ToLower().Contains(lowersearch))
+                {
+                    searchedproducts.Add(product);
+                }
+            }
+            ViewData["products"] = searchedproducts;
+            ViewData["header"] = "on";
+            ViewData["Name"] = Request.Cookies["Name"];
+            int quantity = CartData.QuantityCart();
+            ViewData["quantity"] = quantity;
+            if (ViewData["Name"] == null)
+            {
+                ViewData["greeting"] = "guest";
+                return View("Index");
+            }
+            else
+            {
+                ViewData["greeting"] = Request.Cookies["Name"];
+                return View("Index");
+            }
+            
+        }
+
 
         public IActionResult ClearCart()
         {
@@ -58,12 +84,6 @@ namespace ASP_CA.Controllers
             ViewData["quantity"] = null;
             Index();
             return View("Index");
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
