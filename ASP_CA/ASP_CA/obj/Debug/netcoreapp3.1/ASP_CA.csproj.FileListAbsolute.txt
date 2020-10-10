@@ -230,3 +230,5 @@ C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcorea
 C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.dll
 C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.pdb
 C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.genruntimeconfig.cache
+C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\ShoppingCart.cshtml.g.cs
+C:\Users\Nancy\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs

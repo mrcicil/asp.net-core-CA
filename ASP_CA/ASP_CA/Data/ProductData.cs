@@ -27,6 +27,7 @@ namespace ASP_CA.Data
                     {
                         
                         ProductName = (string)reader["ProductName"]
+                        
 
                     };
                     products.Add(product);
