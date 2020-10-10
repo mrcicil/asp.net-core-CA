@@ -16,6 +16,21 @@ namespace ASP_CA.Controllers
         {
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
+            
+            if (Request.Cookies["Name"] == null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Logout");
+            }
+        }
+
+        public IActionResult Index1()
+        {
+            // to highlight "Login" as the selected menu-item
+            ViewData["Is_Login"] = "menu_hilite";
             CartData.ClearCart();
             if (Request.Cookies["Name"] == null)
             {
@@ -56,7 +71,16 @@ namespace ASP_CA.Controllers
                 string nameCookie = user.Name;
                 Response.Cookies.Append("userId", userIdCookie);
                 Response.Cookies.Append("Name", nameCookie);
-                return RedirectToAction("Index", "Gallery");
+
+                if (Request.Cookies["Fromcart"] == null)
+                {
+                    return RedirectToAction("Index", "Gallery");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Cart");
+                }
+                
             }
         }
     }

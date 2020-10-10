@@ -6,21 +6,37 @@
 @{
     var viewcart = (List<CartProduct>)ViewData["ViewCart"];
 }
-
+<style>
+    table, th, tr {
+        border: 1px solid black;
+    }
+</style>
 
 <div>Total Price: $@ViewData["AllTotalPrice"]</div>
 
-@foreach (var product in viewcart)
-{
 <table>
     <tr>
-        <th>@product.ProductName</th>
-        <th>@product.ProductPrice</th>
-        <th>@product.ProductQuantity</th>
-        <th>@product.ProductTotal</th>
+        <th>
+            Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Total Price
+        </th>
     </tr>
-    
+    @foreach (var product in viewcart)
+    {
+        <tr>
+            <th>@product.ProductName</th>
+            <th>@product.ProductPrice</th>
+            <th>@product.ProductQuantity</th>
+            <th>@product.ProductTotal</th>
+        </tr>
+    }
 </table>
-    
-}
 

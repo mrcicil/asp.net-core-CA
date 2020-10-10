@@ -11,81 +11,14 @@ namespace ASP_CA.Controllers
 {
     public class CartController : Controller
     {
-        // GET: CartController
         public ActionResult Index()
         {
-            /*ViewData["AllTotalPrice"] = CartData.TotalPrice();
-            ViewData["ViewCart"] = CartData.ViewCart();*/
+            ViewData["Name"] = Request.Cookies["Name"];
+            ViewData["AllTotalPrice"] = CartData.TotalPrice();
+            ViewData["ViewCart"] = CartData.ViewCart();
+            Response.Cookies.Delete("Fromgallery");
+            Response.Cookies.Append("Fromcart", "timer");
             return View();
-        }
-
-        // GET: CartController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: CartController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CartController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CartController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: CartController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CartController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: CartController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

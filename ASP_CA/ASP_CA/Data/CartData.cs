@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using AspNetCore;
 using ASP_CA.Models;
 
 namespace ASP_CA.Data
@@ -68,7 +67,7 @@ namespace ASP_CA.Data
             }
         }
 
-        /*public static List<CartProduct> ViewCart()
+        public static List<CartProduct> ViewCart()
         {
             List<Product> products = ProductData.GetAllProducts();
 
@@ -89,17 +88,14 @@ namespace ASP_CA.Data
                         {
                             if (product.ProductId == (int)reader["ProductId"])
                             {
-                                string productName = product.ProductName;
-                                string productDesc1 = product.ProductDesc;
-
                                 CartProduct cartProduct = new CartProduct()
                                 {
                                     ProductId = (int)reader["ProductId"],
                                     ProductPrice = (int)reader["ProductPrice"],
                                     ProductQuantity = (int)reader["Quantity"],
                                     ProductTotal = (int)reader["TotalPrice"],
-                                    ProductName = productName,
-                                    ProductDesc = productDesc1
+                                    ProductName = product.ProductName,
+                                    ProductDesc = product.ProductDesc
 
                                 };cartProducts.Add(cartProduct);
                             }
@@ -108,7 +104,7 @@ namespace ASP_CA.Data
                     
                 }return cartProducts;
             }
-        }*/
+        }
 
     }
 }

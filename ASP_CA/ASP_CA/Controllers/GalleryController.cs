@@ -21,6 +21,8 @@ namespace ASP_CA.Controllers
             ViewData["Name"] = Request.Cookies["Name"];
             int quantity = CartData.QuantityCart();
             ViewData["quantity"] = quantity;
+            Response.Cookies.Delete("Fromcart");
+            Response.Cookies.Append("Fromgallery", "timer");
             if (ViewData["Name"] == null)
             {
                 ViewData["greeting"] = "guest";
@@ -73,13 +75,10 @@ namespace ASP_CA.Controllers
                 ViewData["greeting"] = Request.Cookies["Name"];
                 return View("Index");
             }
-            
         }
-
 
         public IActionResult ClearCart()
         {
-            
             CartData.ClearCart();
             ViewData["quantity"] = null;
             Index();
