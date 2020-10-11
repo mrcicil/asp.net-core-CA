@@ -65,21 +65,7 @@ namespace ASP_CA.Controllers
 
                     codelist.Add(activationcode);
 
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        string sql = @"INSERT INTO [Order] VALUES (@OrderId, @UserId, @ProductId, @Timestamp, @ActivationCode)";
-                        SqlCommand cmd = new SqlCommand(sql, conn);
-
-                        cmd.Parameters.AddWithValue("@OrderId", orderid);
-                        cmd.Parameters.AddWithValue("@UserId", userid);
-                        cmd.Parameters.AddWithValue("@ProductId", product[i]);
-                        cmd.Parameters.AddWithValue("@Timestamp", timestamp);
-                        cmd.Parameters.AddWithValue("@ActivationCode", activationcode);
-
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
+                    Data.Activation.InsertActivationCode(orderid, userid, product[i], timestamp, activationcode);
                 }
                 
             }

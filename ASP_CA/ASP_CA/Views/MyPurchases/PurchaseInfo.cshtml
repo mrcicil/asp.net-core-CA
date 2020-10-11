@@ -7,6 +7,7 @@
     int userid = (int)ViewData["userid"];
     int orderid = (int)ViewData["orderid"];
     string timestamp = (string)ViewData["timestamp"];
+    int k = 0;
     }
 
     <h1>PurchaseInfo</h1>
@@ -19,14 +20,15 @@
     <table>
         @for (int i = 0; i < product.Count; i++)
         {
-            @for (int j = 0; j < amount[i] && amount[i] != 0; j++)
+            @for (int j = 0; j < amount[i] && amount[i] != 0; j++, k++)
             {
                 <tr>
                     <td width="22%">Product: </td>
                     <td width="20%">@product[i]</td>
                     <td width="30%">Act. Code: </td>
-                    <td width="60%">@codelist[i]</td>
+                    <td width="60%">@codelist[k]</td>
                 </tr>
+                
             }
 
         }
