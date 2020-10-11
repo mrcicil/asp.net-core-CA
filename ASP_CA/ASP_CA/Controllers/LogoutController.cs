@@ -9,7 +9,7 @@ namespace ASP_CA.Controllers
 {
     public class LogoutController : Controller
     {
-        public IActionResult Index(Sessions sessions)
+        public IActionResult Index([FromServices] Sessions sessions)
         {
             string sessionId = HttpContext.Request.Cookies["sessionId"];
             Session session = null;
@@ -21,7 +21,11 @@ namespace ASP_CA.Controllers
                 HttpContext.Response.Cookies.Delete("sessionId");
             }
 
-            sessions.map.Remove(sessionId);
+            if (sessionId != null)
+            {
+                sessions.map.Remove(sessionId);
+            }
+            
             HttpContext.Response.Cookies.Delete("sessionId");
             return RedirectToAction("Index", "Gallery");
         }

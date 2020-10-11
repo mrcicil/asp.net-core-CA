@@ -12,7 +12,12 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
-        public IActionResult Index(string error, Sessions sessions)
+        Sessions sessions;
+        public GalleryController(Sessions sessions)
+        {
+            this.sessions = sessions;
+        }
+        public IActionResult Index(string error)
         {
             string sessionId = HttpContext.Request.Cookies["sessionId"];
             Session session = null;

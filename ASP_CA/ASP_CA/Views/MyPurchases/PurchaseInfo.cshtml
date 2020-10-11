@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "PurchaseInfo";
     List<int> product = (List<int>)ViewData["product"];
+    List<int> amount = (List<int>)ViewData["amount"];
     List<string> codelist = (List<string>) ViewData["codelist"];
     int userid = (int)ViewData["userid"];
     int orderid = (int)ViewData["orderid"];
@@ -18,12 +19,16 @@
     <table>
         @for (int i = 0; i < product.Count; i++)
         {
-            <tr>
-                <td width="22%">Product: </td>
-                <td width="20%">@product[i]</td>
-                <td width="30%">Act. Code: </td>
-                <td width="60%">@codelist[i]</td>
-            </tr>
+            @for (int j = 0; j < amount[i] && amount[i] != 0; j++)
+            {
+                <tr>
+                    <td width="22%">Product: </td>
+                    <td width="20%">@product[i]</td>
+                    <td width="30%">Act. Code: </td>
+                    <td width="60%">@codelist[i]</td>
+                </tr>
+            }
+
         }
     </table>
 
