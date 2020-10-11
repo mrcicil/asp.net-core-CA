@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var myPurchases = (List<MyPurchase>)ViewData["MyPurchases"];
+    var summariseMyPurchases = (List<SummariseMyPurchase>)ViewData["SummariseMyPurchases"];
+}
+
+@if (ViewData["MyPurchases"] == null)
+{
+    <div>Empty</div>
+}
+else
+{
+    <div>
+
+        @foreach (var summariseMyPurchase in summariseMyPurchases)
+        {
+
+            <div>Name: @summariseMyPurchase.ProductName</div>
+            <div>Purchased on: @summariseMyPurchase.Timestamp</div>
+            <div>Amount @summariseMyPurchase.Quantity</div>
+
+            <select>
+                @foreach (var myPurchase in myPurchases)
+                {
+                    @if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
+                    {
+                        <option>@myPurchase.ActivationCode</option>
+                    }
+                }
+            </select>
+
+
+        }
+    </div>
+}

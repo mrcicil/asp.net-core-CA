@@ -16,7 +16,8 @@ namespace ASP_CA.Controllers
         {
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
-            
+            Response.Cookies.Delete("searchedproducts");
+
             if (Request.Cookies["Name"] == null)
             {
                 return View();
@@ -32,6 +33,8 @@ namespace ASP_CA.Controllers
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";
             CartData.ClearCart();
+            Response.Cookies.Delete("searchedproducts");
+            Response.Cookies.Delete("Fromcart");
             if (Request.Cookies["Name"] == null)
             {
                 return View();

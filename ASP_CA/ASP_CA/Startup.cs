@@ -25,9 +25,7 @@ namespace ASP_CA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSingleton<UserIdCookies>();
-            services.AddSingleton<Sessions>();
-            services.AddSingleton<Click>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

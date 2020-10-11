@@ -5,6 +5,7 @@
 @using  ASP_CA.Controllers
 @{
     var viewcart = (List<CartProduct>)ViewData["ViewCart"];
+    int total = (int)ViewData["AllTotalPrice"];
 }
 <style>
     table, th, tr {
@@ -15,9 +16,37 @@
         background: white;
     }
 </style>
+<script>
+    function checkLogin() {
+        alert('Please Log In');
+    }
+    function thankspurchase() {
+        alert('Thanks for purchase! Enjoy your day!!')
+    }
+</script>
 
 <div>Total Price: $@ViewData["AllTotalPrice"]</div>
 
+@if (total != 0)
+{
+    @if (ViewData["Name"] == null)
+    {
+        <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
+    }
+    else
+    {
+        <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+    }
+}
+
+@if (ViewData["Name"] != null)
+{
+    <a class="btn" asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+}
+
+
+@if (total != 0)
+{
 <table>
     <tr>
         <th>
@@ -42,11 +71,32 @@
             <th>$@product.ProductTotal</th>
             <th>
                 <form id="form" action="/Cart/PlusOne" method="post">
-                <input type="hidden" name="productId" value="@product.ProductId" />
-                <input class="btn" type="submit" value="+" />
+                    <input type="hidden" name="productId" value="@product.ProductId" />
+                    <input class="btn" type="submit" value="+" />
+                </form>
+            </th>
+            <th>
+                <form id="form" action="/Cart/MinusOne" method="post">
+                    <input type="hidden" name="productId" value="@product.ProductId" />
+                    <input class="btn" type="submit" value="-" />
+                </form>
+            </th>
+            <th>
+                <form id="form" action="/Cart/Remove" method="post">
+                    <input type="hidden" name="productId" value="@product.ProductId" />
+                    <input class="btn" type="submit" value="Remove" />
                 </form>
             </th>
         </tr>
     }
 </table>
+}
+else
+{
+    <div>Empty Cart</div>
+}
 
+@if (total != 0)
+{
+    <a class="btn" asp-area="" asp-controller="Cart" asp-action="ClearCart">Clear Cart</a>
+}

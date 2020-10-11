@@ -11,7 +11,7 @@ namespace ASP_CA.Models
         public string ProductName { get; set; }
         public string ProductDesc { get; set; }
         public int ProductPrice { get; set; }
-        public int ProductQuantity { get; set; }
+        public int ProductQuantity { get; set; }   //there is no 0 quantity
         public int ProductTotal { get; set; }
     }
 }

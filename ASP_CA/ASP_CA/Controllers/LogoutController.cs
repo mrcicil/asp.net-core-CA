@@ -14,6 +14,8 @@ namespace ASP_CA.Controllers
         {
             Response.Cookies.Delete("userId");
             Response.Cookies.Delete("Name");
+            Response.Cookies.Delete("searchedproducts");
+            Response.Cookies.Delete("Fromcart");
             CartData.ClearCart();
             return RedirectToAction("Index", "Login");
         }

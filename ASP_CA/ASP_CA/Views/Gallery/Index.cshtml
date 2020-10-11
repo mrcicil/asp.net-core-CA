@@ -1,15 +1,16 @@
-﻿@model ASP_CA.Models.Click
+﻿
 @using  ASP_CA.Controllers
 @{
     ViewData["Title"] = "Index";
     var products = (List<Product>)ViewData["products"];
-   
+    int total = (int)ViewData["quantity"];
+
 }
 @*<a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>*@
 
 <style>
-    .btn{
-        background:white;
+    .btn {
+        background: white;
     }
 </style>
 
@@ -21,22 +22,33 @@
 
 <form id="form" action="/Gallery/Search" method="post">Search: <input name="search" /><input type="submit" value="Search" /></form>
 
+@if (ViewData["Name"] != null)
+{
+    <a class="btn" asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+}
+
+@foreach (var product in products)
+{
+    <form id="form" action="/Gallery/Click" method="post">
+        <input type="hidden" name="productId" value="@product.ProductId" />
+        <input type="text" value="@product.ProductName" />
+        <input type="text" value="@product.ProductDesc" />
+        <input type="text" value="@product.ProductPrice" />
+        <input type="submit" value="Add To cart" />
+    </form>
+}
 
 
-    @foreach (var product in products)
-    {
-        <form id="form" action="/Gallery/Click" method="post">
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <input type="text" value="@product.ProductName" />
-            <input type="text" value="@product.ProductDesc" />
-            <input type="text" value="@product.ProductPrice" />
-            <input type="submit" value="Add To cart" />
-        </form>
-    }
 
-
-
+@if (total != 0)
+{
     <a class="btn" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Clear Cart</a>
+}
+
+@if (ViewData["clearsearch"] != null)
+{
+    <a class="btn" asp-area="" asp-controller="Gallery" asp-action="ClearSearch">Clear Search</a>
+}
 
 
 

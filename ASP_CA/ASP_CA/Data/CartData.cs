@@ -122,5 +122,57 @@ namespace ASP_CA.Data
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public static void MinusOneInCart(string productId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"UPDATE Cart2 
+                             SET Quantity = Quantity - 1
+                              WHERE ProductId = " + productId +
+                              "UPDATE Cart2 " +
+                               "SET TotalPrice = Quantity * ProductPrice " +
+                               "WHERE ProductId = " + productId;
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public static void RemoveInCart(string productId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"UPDATE Cart2 
+                             SET Quantity = 0
+                              WHERE ProductId = " + productId +
+                              "UPDATE Cart2 " +
+                               "SET TotalPrice = Quantity * ProductPrice " +
+                               "WHERE ProductId = " + productId;
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void CheckOut(int userId,CartProduct cartProduct)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string sql = @"insert into Order1 (UserId, ProductId, ProductName, Timestamp, ActivationCode)
+                             values (@UserId, @ProductId, @ProductName, @Timestamp, @ActivationCode)";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@UserId", userId);
+                cmd.Parameters.AddWithValue("@ProductId", cartProduct.ProductId);
+                cmd.Parameters.AddWithValue("@ProductName", cartProduct.ProductName);
+                cmd.Parameters.AddWithValue("@Timestamp", DateTime.Now.ToString("d/MMM/yyyy"));
+                cmd.Parameters.AddWithValue("@ActivationCode", Guid.NewGuid().ToString());
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

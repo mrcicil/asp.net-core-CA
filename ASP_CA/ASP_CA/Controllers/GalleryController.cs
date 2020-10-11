@@ -18,11 +18,11 @@ namespace ASP_CA.Controllers
           
             ViewData["products"] = products;
             ViewData["header"] = "on";
-            ViewData["Name"] = Request.Cookies["Name"];
+            ViewData["Name"] = Request.Cookies["Name"];  //logout view
             int quantity = CartData.QuantityCart();
             ViewData["quantity"] = quantity;
             Response.Cookies.Delete("Fromcart");
-            Response.Cookies.Append("Fromgallery", "timer");
+            Response.Cookies.Append("Fromgallery", "timer"); //enter this page when login
             if (ViewData["Name"] == null)
             {
                 ViewData["greeting"] = "guest";
@@ -34,15 +34,22 @@ namespace ASP_CA.Controllers
                 return View();
             }
         }
-
         [HttpPost]
        public IActionResult Click(string productId)
         {
                 CartData.AddToCart(productId);
+            if (Request.Cookies["searchedproducts"] == null)
+            {
                 Index();
                 return View("Index");
+            }
+            else
+            {
+                Search(Request.Cookies["searchedproducts"]);
+                return View("Index");
+            }
+                
         }
-
         [HttpPost]
         public IActionResult Search(string search)
         {
@@ -61,6 +68,8 @@ namespace ASP_CA.Controllers
                 }
             }
             ViewData["products"] = searchedproducts;
+            ViewData["clearsearch"] = "on";
+            Response.Cookies.Append("searchedproducts", search);
             ViewData["header"] = "on";
             ViewData["Name"] = Request.Cookies["Name"];
             int quantity = CartData.QuantityCart();
@@ -76,13 +85,15 @@ namespace ASP_CA.Controllers
                 return View("Index");
             }
         }
-
+        public IActionResult ClearSearch()
+        {
+            Response.Cookies.Delete("searchedproducts");
+            return RedirectToAction("Index", "Gallery");
+        }
         public IActionResult ClearCart()
         {
             CartData.ClearCart();
-            ViewData["quantity"] = null;
-            Index();
-            return View("Index");
+            return RedirectToAction("Index", "Gallery");
         }
     }
 }
