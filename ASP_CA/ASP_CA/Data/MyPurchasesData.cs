@@ -44,9 +44,9 @@ namespace ASP_CA.Data
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"select ProductName, Timestamp, Count(*) as Quantity
+                string sql = @"select ProductId, ProductName, Timestamp, Count(*) as Quantity
                                 from Order1
-                                where UserId = " + userId + "group by productname, timestamp";
+                                where UserId = " + userId + "group by productid, productname, timestamp";
                                 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -56,7 +56,8 @@ namespace ASP_CA.Data
                 {
                     SummariseMyPurchase summariseMyPurchase = new SummariseMyPurchase()
                     {
-                        
+
+                        ProductId = (int)reader["ProductId"],
                         ProductName = (string)reader["ProductName"],
                         Timestamp = (string)reader["Timestamp"],
                         Quantity = (int)reader["Quantity"]
