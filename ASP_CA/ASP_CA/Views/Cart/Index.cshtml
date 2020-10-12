@@ -28,38 +28,32 @@
             left: 50%;
             margin-right: -50%;
             transform: translate(-50%, -50%)
-            
         }
 
     .emptyfont {
         font-size: 40px
     }
+
     .btn {
         background: white;
     }
-
-    
     }
 </style>
 <script>
     function checkLogin() {
         alert('Please Log In');
-    }
+    }  @*login warning*@
     function thankspurchase() {
         alert('Thanks for purchase! Enjoy your day!!')
     }
     function reachlowlimit() {
-        alert('You have reach the lowest amount')
+        alert('Select remove if you want to delete the item')
     }
 </script>
-
-
 @if (total != 0)
 {
-<div>Total Price: $@ViewData["AllTotalPrice"]</div>
-}
-
-
+    <div>Total Price: $@ViewData["AllTotalPrice"]</div>
+}  @*show total price*@
 @if (total != 0)
 {
     @if (ViewData["Name"] == null)
@@ -70,13 +64,12 @@
     {
         <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
     }
-}
+}    @*checkout with log in warning*@
 
 @if (ViewData["Name"] != null)
 {
     <a class="btn" asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
 }
-
 
 @if (total != 0)
 {
@@ -151,3 +144,7 @@ else
 {
     <a class="btn" asp-area="" asp-controller="Cart" asp-action="ClearCart">Clear Cart</a>
 }
+
+
+
+

@@ -20,6 +20,7 @@ namespace ASP_CA.Controllers
             ViewData["MyPurchases"] = myPurchases;
             Response.Cookies.Delete("Fromcart");
             ViewData["SummariseMyPurchases"] = summariseMyPurchases;
+            
             return View();
         }
     }

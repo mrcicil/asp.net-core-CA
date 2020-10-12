@@ -34,6 +34,7 @@ namespace ASP_CA.Controllers
             CartData.ClearCart();
             Response.Cookies.Delete("searchedproducts");
             Response.Cookies.Delete("Fromcart");
+            ViewData["LoginDisplay"] = "off";
             if (Request.Cookies["Name"] == null)
             {
                 return View();
@@ -58,7 +59,7 @@ namespace ASP_CA.Controllers
                     user.UserId = u.UserId;
                 }
             }
-            if (username != user.Username && password != user.Password )
+            if (username != user.Username || password != user.Password )
             {
                 // to highlight "Login" as the selected menu-item
                 ViewData["Is_Login"] = "menu_hilite";

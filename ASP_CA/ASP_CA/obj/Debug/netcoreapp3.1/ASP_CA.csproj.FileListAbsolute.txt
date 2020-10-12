@@ -237,3 +237,4 @@ C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart
 C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\MyPurchases\Index.cshtml.g.cs
 C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs
 C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index1.cshtml.g.cs
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs

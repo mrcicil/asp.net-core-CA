@@ -23,6 +23,7 @@ namespace ASP_CA.Controllers
             ViewData["quantity"] = quantity;
             Response.Cookies.Delete("Fromcart");
             Response.Cookies.Append("Fromgallery", "timer"); //enter this page when login
+            ViewData["LoginDisplay"] = "on";
             if (ViewData["Name"] == null)
             {
                 ViewData["greeting"] = "guest";
@@ -57,33 +58,41 @@ namespace ASP_CA.Controllers
 
             List<Product> searchedproducts = new List<Product>();
 
-            
-            string lowersearch = (search.Trim()).ToLower();
+            if (search != null)
+            {
+                string lowersearch = (search.Trim()).ToLower();
 
-            foreach(var product in products)
-            {
-                if (product.ProductName.ToLower().Contains(lowersearch) | product.ProductDesc.ToLower().Contains(lowersearch) | product.ProductPrice.ToString().ToLower().Contains(lowersearch))
+                foreach (var product in products)
                 {
-                    searchedproducts.Add(product);
+                    if (product.ProductName.ToLower().Contains(lowersearch) | product.ProductDesc.ToLower().Contains(lowersearch) | product.ProductPrice.ToString().ToLower().Contains(lowersearch))
+                    {
+                        searchedproducts.Add(product);
+                    }
                 }
-            }
-            ViewData["products"] = searchedproducts;
-            ViewData["clearsearch"] = "on";
-            Response.Cookies.Append("searchedproducts", search);
-            ViewData["header"] = "on";
-            ViewData["Name"] = Request.Cookies["Name"];
-            int quantity = CartData.QuantityCart();
-            ViewData["quantity"] = quantity;
-            if (ViewData["Name"] == null)
-            {
-                ViewData["greeting"] = "guest";
-                return View("Index");
+                ViewData["products"] = searchedproducts;
+                ViewData["clearsearch"] = "on";
+                Response.Cookies.Append("searchedproducts", search);
+                ViewData["header"] = "on";
+                ViewData["Name"] = Request.Cookies["Name"];
+                int quantity = CartData.QuantityCart();
+                ViewData["quantity"] = quantity;
+                ViewData["LoginDisplay"] = "on";
+                if (ViewData["Name"] == null)
+                {
+                    ViewData["greeting"] = "guest";
+                    return View("Index");
+                }
+                else
+                {
+                    ViewData["greeting"] = Request.Cookies["Name"];
+                    return View("Index");
+                }
             }
             else
             {
-                ViewData["greeting"] = Request.Cookies["Name"];
-                return View("Index");
+                return RedirectToAction("Index", "Gallery");
             }
+            
         }
         public IActionResult ClearSearch()
         {

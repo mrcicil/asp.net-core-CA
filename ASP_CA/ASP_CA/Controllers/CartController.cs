@@ -20,6 +20,7 @@ namespace ASP_CA.Controllers
             Response.Cookies.Delete("Fromgallery");
             Response.Cookies.Delete("searchedproducts");
             Response.Cookies.Append("Fromcart", "timer");  //enter this page when login
+            ViewData["LoginDisplay"] = "on";
             return View();
         }
         [HttpPost]
@@ -50,6 +51,7 @@ namespace ASP_CA.Controllers
             int userId = Convert.ToInt32(Request.Cookies["userId"]);
             List<CartProduct> cartProducts = CartData.ViewCart();
 
+
             foreach(var cartProduct in cartProducts)
             {
                 int quantity = cartProduct.ProductQuantity;
@@ -57,7 +59,9 @@ namespace ASP_CA.Controllers
                 {
                     CartData.CheckOut(userId, cartProduct);
                 }
-            }return RedirectToAction("Index", "MyPurchases");
+            }
+            CartData.ClearCart();
+            return RedirectToAction("Index", "MyPurchases");
         }
 
     }
