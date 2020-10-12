@@ -53,10 +53,7 @@
 
 
 
-@if (ViewData["Name"] != null)
-{
-    <a asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
-}
+
 
 
 @{
@@ -221,18 +218,26 @@ else
 <div class="shopping-cart">
     <div class="title">
         Shopping cart
+        @if (ViewData["Name"] != null)
+        {
+            <a asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+        }
         @if (total != 0)
         {
-@if (ViewData["Name"] == null)
-{
-<div class="btn" style="float:right">
-    <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
-</div> }
-                    else
-                    {
-<div class="btn" style="float:right">
-    <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
-</div>}}
+            @if (ViewData["Name"] == null)
+            {
+    <div style="float:right">
+        
+        <a onclick="checkLogin()" asp-area="" asp-controller="Cart" asp-action="Index">Checkout</a>
+    </div> 
+                }
+            else
+            {
+                <div style="float:right">
+                    <a onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+                </div>
+                }
+        }
     </div>
 
 
@@ -261,35 +266,34 @@ else
 
 
 
-    <div class="quantity" style="width:100px">
+<div class="quantity" style="width:100px">
+    <form id="form" action="/Cart/PlusOne" method="post">
+        <input type="hidden" name="productId" value="@product.ProductId" />
+        <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
+    </form>
+    <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
+
+
+    @if (product.ProductQuantity > 1)
+    {
+<form id="form" action="/Cart/MinusOne" method="post">
+    <input type="hidden" name="productId" value="@product.ProductId" />
+    <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
+</form>
+    }
+    else
+    {
+
+    <input type="hidden" name="productId" value="@product.ProductId" />
+    <button class="quantity-btn" style="width:30px;float:left" type="submit" onclick="reachlowlimit()" name="button" value="-">-</button>
+
+    }
 
 
 
-        <form id="form" action="/Cart/PlusOne" method="post">
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
-        </form>
 
 
-
-
-
-        <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
-
-
-
-
-
-        <form id="form" action="/Cart/MinusOne" method="post">
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
-        </form>
-
-
-
-
-
-    </div>
+</div>
 
 
 
@@ -349,6 +353,7 @@ else
                                     <form action="/Gallery/Index" method="post">
                                         <input class="container4" type="submit" value="Continue Shopping" />
                                     </form>
-                                </div>}
+                                </div>
+                                }
 
 
