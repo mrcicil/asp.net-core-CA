@@ -234,20 +234,28 @@ else
         @*Quantity*@
 
 
-    <div class="quantity">
-        
-            <form id="form" action="/Cart/PlusOne" method="post">
-                <input type="hidden" name="productId" value="@product.ProductId" />
-                <button class="btn" type="submit" value="+" />
-            </form>
-        
-        <input type="text" name="quantity" style="width: 30px;" value="@product.ProductQuantity"/>
-        
-            <form id="form" action="/Cart/MinusOne" method="post">
-                <input type="hidden" name="productId" value="@product.ProductId" />
-                <button class="btn" type="submit" value="-" />
-            </form>
-        
+    <div class="quantity" style="width:100px">
+
+
+
+        <form id="form" action="/Cart/PlusOne" method="post">
+            <input type="hidden" name="productId" value="@product.ProductId" />
+            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
+        </form>
+
+
+
+        <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
+
+
+
+        <form id="form" action="/Cart/MinusOne" method="post">
+            <input type="hidden" name="productId" value="@product.ProductId" />
+            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
+        </form>
+
+
+
     </div>
 
         @*<div class="quantity">
