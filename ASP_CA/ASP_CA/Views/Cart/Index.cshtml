@@ -53,7 +53,10 @@
 
 
 
-
+@if (ViewData["Name"] != null)
+{
+    <a asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+}
 
 
 @{
@@ -215,115 +218,137 @@
 }
 else
 {
-    
-
-               <div></div> 
-            <div class="shopping-cart">
-                <div class="title">
-                    Shopping cart
-                    @if (total != 0)
+<div class="shopping-cart">
+    <div class="title">
+        Shopping cart
+        @if (total != 0)
+        {
+@if (ViewData["Name"] == null)
+{
+<div class="btn" style="float:right">
+    <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
+</div> }
+                    else
                     {
-                        @if (ViewData["Name"] == null)
-                        {
-                            <div class="btn" style="float:right">
-                                <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="btn" style="float:right">
-                                <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
-                            </div>
-                        }
-                    }
-                </div>
-
-                @foreach (var product in viewcart)
-                {
-                    <div class="item">
-                        @*product image*@
-                        <div class="image">
-                            <img src="/img/@(product.ProductId).png" width="100" height="100" />
-                        </div>
-
-                        @*Product name & description*@
-                        <div class="description">
-                            <span>@product.ProductName</span>
-                            <span>@product.ProductDesc</span>
-                            <span>$@product.ProductPrice</span>
-                        </div>
-
-                        @*Quantity*@
-
-
-                        <div class="quantity" style="width:100px">
+<div class="btn" style="float:right">
+    <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+</div>}}
+    </div>
 
 
 
-                            <form id="form" action="/Cart/PlusOne" method="post">
-                                <input type="hidden" name="productId" value="@product.ProductId" />
-                                <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
-                            </form>
+    @foreach (var product in viewcart)
+    {
+<div class="item" style="height:130px">
+    @*product image*@
+    <div class="image" style="width:130px">
+        <img src="/img/@(product.ProductId).png" width="80" height="80" />
+    </div>
 
 
 
-                            <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
+    @*Product name & description*@
+    <div class="description" style="width:350px">
+        <span>@product.ProductName</span>
+        <span>@product.ProductDesc</span>
+        <span>$@product.ProductPrice</span>
+    </div>
 
 
 
-                            <form id="form" action="/Cart/MinusOne" method="post">
-                                <input type="hidden" name="productId" value="@product.ProductId" />
-                                <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
-                            </form>
+    @*Quantity*@
 
 
 
-                        </div>
 
-                        @*<div class="quantity">
-                                <button class="quantity-btn" type="button" name="button">
-                                    <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
-                                </button>
-                                <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
-                                <button class="quantity-btn" type="button" name="button">
-                                    <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
-                                </button>
-                            </div>*@
+    <div class="quantity" style="width:100px">
 
 
-                        @*price*@
-                        <div class="itemPrice"><p>$@product.ProductTotal</p></div>
 
-                        @*delete button*@
-                        <div class="buttons">
-                            <form id="form" action="/Cart/Remove" method="post">
-                                <input type="hidden" name="productId" value="@product.ProductId" />
-                                <button class="quantity-btn" type="submit" style="width:80px;float:left" value="Remove">Remove</button>
-                            </form>
-                            @*<button class="delete-btn" type="button" name="button">
-                                    <i class="material-icons" style="font-size:24px;">delete</i>
-                                </button>*@
-                        </div>
+        <form id="form" action="/Cart/PlusOne" method="post">
+            <input type="hidden" name="productId" value="@product.ProductId" />
+            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
+        </form>
+
+
+
+
+
+        <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
+
+
+
+
+
+        <form id="form" action="/Cart/MinusOne" method="post">
+            <input type="hidden" name="productId" value="@product.ProductId" />
+            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
+        </form>
+
+
+
+
+
+    </div>
+
+
+
+    @*<div class="quantity">
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
+            </button>
+            <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
+            </button>
+        </div>*@
+
+
+
+
+    @*price*@
+    <div class="itemPrice"><p>$@product.ProductTotal</p></div>
+
+
+
+    @*delete button*@
+    <div class="buttons">
+        <form id="form" action="/Cart/Remove" method="post">
+            <input type="hidden" name="productId" value="@product.ProductId" />
+            <button class="quantity-btn" type="submit" style="width:80px;float:left" value="Remove">Remove</button>
+        </form>
+        @*<button class="delete-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">delete</i>
+            </button>*@
+    </div>
+</div>                }
+
+
+
+
+</div>
+
+
+
+
+                <div class="total">
+                    <div class="total-item">
+                        <label>Total: $@ViewData["AllTotalPrice"]</label>
+
+
+
                     </div>
-                }
 
 
-            </div>
-
-
-            <div class="total">
-                <div class="total-item">
-                    <label>Total: $@ViewData["AllTotalPrice"]</label>
 
                 </div>
 
-            </div>
 
-            <div class="shopping-btn">
-                <form action="/Gallery/Index" method="post">
-                    <input class="container4" type="submit" value="Continue Shopping" />
-                </form>
-            </div>
-        }
+
+                                <div class="shopping-btn">
+                                    <form action="/Gallery/Index" method="post">
+                                        <input class="container4" type="submit" value="Continue Shopping" />
+                                    </form>
+                                </div>}
 
 

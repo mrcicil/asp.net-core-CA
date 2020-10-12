@@ -25,10 +25,7 @@
 </div>
 
 
-@if (ViewData["Name"] != null)
-{
-    <a class="btn" asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
-}
+
 
 
 
@@ -191,8 +188,11 @@
     <div style="position:relative">
         <div class="title">
             Gallery
-
-            <form id="form" style="float:right" action="/Gallery/Search" method="post">Search: <input name="search" /><input class="btn" type="submit" value="Search" /></form>
+            @if (ViewData["Name"] != null)
+            {
+                <a  asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+            }
+            <form id="form" style="float:right" action="/Gallery/Search" method="post">Search: <input name="search" /><input type="submit" value="Search" /></form>
         </div>
 
 
