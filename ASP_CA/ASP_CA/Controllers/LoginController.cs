@@ -27,7 +27,7 @@ namespace ASP_CA.Controllers
                 return RedirectToAction("Index", "Logout");
             }
         }
-        public IActionResult Index1()
+        public IActionResult FirstPage()
         {
             // to highlight "Login" as the selected menu-item
             ViewData["Is_Login"] = "menu_hilite";

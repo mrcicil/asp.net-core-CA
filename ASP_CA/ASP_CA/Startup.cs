@@ -52,7 +52,7 @@ namespace ASP_CA
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=Index1}/{id?}");
+                    pattern: "{controller=Login}/{action=FirstPage}/{id?}");
             });
         }
     }

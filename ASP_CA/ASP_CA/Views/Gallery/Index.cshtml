@@ -11,16 +11,19 @@
 <style>
     .btn {
         background: white;
+        border-radius: 12px;
     }
 </style>
 
-<div class="btn">Quantity @ViewData["quantity"]</div>
+@*<div class="btn">Quantity @ViewData["quantity"]</div>*@
 
 <div>Welcome @ViewData["greeting"]</div>
 
-<a class="btn" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
-
-<form id="form" action="/Gallery/Search" method="post">Search: <input name="search" /><input type="submit" value="Search" /></form>
+<div class="btn" style="float:right">
+    <a class="material-icons"  asp-area="" asp-controller="Cart" asp-action="Index">shopping_cart</a>
+    @ViewData["quantity"]
+</div>
+<form id="form" action="/Gallery/Search" method="post">Search: <input name="search" /><input class="btn" type="submit" value="Search" /></form>
 
 @if (ViewData["Name"] != null)
 {
@@ -33,17 +36,17 @@
         <input type="hidden" name="productId" value="@product.ProductId" />
         <input type="text" value="@product.ProductName" />
         <input type="text" value="@product.ProductDesc" />
-        <input type="text" value="@product.ProductPrice" />
+        $<input type="text" value="@product.ProductPrice" />
         <input type="submit" value="Add To cart" />
     </form>
 }
 
 
 
-@if (total != 0)
+@*@if (total != 0)
 {
     <a class="btn" asp-area="" asp-controller="Gallery" asp-action="ClearCart">Clear Cart</a>
-}
+}*@
 
 @if (ViewData["clearsearch"] != null)
 {

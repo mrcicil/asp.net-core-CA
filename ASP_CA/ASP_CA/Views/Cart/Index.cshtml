@@ -15,6 +15,31 @@
     .btn {
         background: white;
     }
+
+    div.container4 {
+        height: 10em;
+        position: relative
+    }
+
+        div.container4 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+            
+        }
+
+    .emptyfont {
+        font-size: 40px
+    }
+    .btn {
+        background: white;
+    }
+
+    
+    }
 </style>
 <script>
     function checkLogin() {
@@ -23,9 +48,17 @@
     function thankspurchase() {
         alert('Thanks for purchase! Enjoy your day!!')
     }
+    function reachlowlimit() {
+        alert('You have reach the lowest amount')
+    }
 </script>
 
+
+@if (total != 0)
+{
 <div>Total Price: $@ViewData["AllTotalPrice"]</div>
+}
+
 
 @if (total != 0)
 {
@@ -47,53 +80,71 @@
 
 @if (total != 0)
 {
-<table>
-    <tr>
-        <th>
-            Name
-        </th>
-        <th>
-            Price
-        </th>
-        <th>
-            Quantity
-        </th>
-        <th>
-            Total Price
-        </th>
-    </tr>
-    @foreach (var product in viewcart)
-    {
+    <table>
         <tr>
-            <th>@product.ProductName</th>
-            <th>$@product.ProductPrice</th>
-            <th>@product.ProductQuantity</th>
-            <th>$@product.ProductTotal</th>
             <th>
-                <form id="form" action="/Cart/PlusOne" method="post">
-                    <input type="hidden" name="productId" value="@product.ProductId" />
-                    <input class="btn" type="submit" value="+" />
-                </form>
+                Name
             </th>
             <th>
-                <form id="form" action="/Cart/MinusOne" method="post">
-                    <input type="hidden" name="productId" value="@product.ProductId" />
-                    <input class="btn" type="submit" value="-" />
-                </form>
+                Price
             </th>
             <th>
-                <form id="form" action="/Cart/Remove" method="post">
-                    <input type="hidden" name="productId" value="@product.ProductId" />
-                    <input class="btn" type="submit" value="Remove" />
-                </form>
+                Quantity
+            </th>
+            <th>
+                Total Price
             </th>
         </tr>
-    }
-</table>
+        @foreach (var product in viewcart)
+        {
+            <tr>
+                <th>@product.ProductName</th>
+                <th>$@product.ProductPrice</th>
+                <th>@product.ProductDesc</th>
+                <th>@product.ProductQuantity</th>
+                <th>$@product.ProductTotal</th>
+                <th>
+                    <form id="form" action="/Cart/PlusOne" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <input class="btn" type="submit" value="+" />
+                    </form>
+                </th>
+                @if (product.ProductQuantity > 1)
+                {
+                    <th>
+                        <form id="form" action="/Cart/MinusOne" method="post">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input class="btn" type="submit" value="-" />
+                        </form>
+                    </th>
+                }
+                else
+                {
+                    <th>
+                        <input class="btn" type="submit" onclick="reachlowlimit()" value="-" />
+                    </th>
+                }
+
+                <th>
+                    <form id="form" action="/Cart/Remove" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <input class="btn" type="submit" value="Remove" />
+                    </form>
+                </th>
+            </tr>
+        }
+    </table>
 }
 else
 {
-    <div>Empty Cart</div>
+    <div class="container4 emptyfont">
+        <p>Empty Cart!
+    </div>
+    <div class="container4">
+        <form action="/Gallery/Index" method="post">
+            <p><input class="container4" type="submit" value="Continue Shopping" />
+        </form>
+    </div>
 }
 
 @if (total != 0)

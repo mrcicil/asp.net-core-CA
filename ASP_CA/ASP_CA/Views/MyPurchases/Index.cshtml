@@ -6,9 +6,30 @@
     var summariseMyPurchases = (List<SummariseMyPurchase>)ViewData["SummariseMyPurchases"];
 }
 
+<style>
+    div.container4 {
+        height: 10em;
+        position: relative
+    }
+
+        div.container4 p {
+            margin: 0;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+    .btn {
+        background: white;
+    }
+</style>
+
 @if (ViewData["MyPurchases"] == null)
 {
-    <div>Empty</div>
+    <div class="btn">Empty Cart</div>
 }
 else
 {

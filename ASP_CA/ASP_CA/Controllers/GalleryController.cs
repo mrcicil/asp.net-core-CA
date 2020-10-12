@@ -58,7 +58,7 @@ namespace ASP_CA.Controllers
             List<Product> searchedproducts = new List<Product>();
 
             
-            string lowersearch = (search.TrimEnd()).ToLower();
+            string lowersearch = (search.Trim()).ToLower();
 
             foreach(var product in products)
             {
