@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
+    "C:\\Users\\hoxut\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
+    "C:\\Users\\hoxut\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "projectUniqueName": "C:\\Users\\hoxut\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
         "projectName": "ASP_CA",
-        "projectPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
-        "packagesPath": "C:\\Users\\e0641583\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\obj\\",
+        "projectPath": "C:\\Users\\hoxut\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "packagesPath": "C:\\Users\\hoxut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hoxut\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\e0641583\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoxut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

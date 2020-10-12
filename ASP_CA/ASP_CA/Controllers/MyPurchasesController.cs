@@ -5,15 +5,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
+using ASP_CA.Data;
 
 namespace ASP_CA.Controllers
 {
     public class MyPurchasesController : Controller
     {
+        protected static readonly string connectionString = "data source=DESKTOP-BU3GJLT; Database=ASP_CA; Integrated Security=true";
         // GET: MyPurchasesController
         public ActionResult Index()
         {
-            return View();
+            List<MyPurchases> allPurchases = MyPurchasesData.GetAllMyPurchases();
+            string[] images =
+            {
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png",
+                "5.png",
+                "6.png"
+            };
+            ViewData["images"] = images;
+            return View(allPurchases);
         }
 
         // GET: MyPurchasesController/Details/5

@@ -1,0 +1,25 @@
+﻿@model List<ASP_CA.Models.MyPurchases>;
+@{
+    ViewData["Title"] = "Index";
+    string[] image = (string[])ViewData["images"];
+}
+
+<h1>My Purchases</h1>
+<table align="center" width="70%">
+    @foreach (var mypurchase in Model)
+    {
+    <tr>
+        <td>
+            @{int k = mypurchase.ProductID; }
+            <img src="~/img/@image[k]" height="200" width="200" />
+            <br><b>@mypurchase.ProductName</b><br><br>
+        </td>
+    <td>
+        Purchased on : @mypurchase.PurchasedOn<br><br>
+        Order ID : @mypurchase.OrderID<br><br>
+        Activation code: @mypurchase.ActivationCode
+    </td>
+    </tr>
+    }
+    </table>
+
