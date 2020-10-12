@@ -29,16 +29,7 @@
 
 
 
-@if (ViewData["MyPurchases"] == null)
-{
-    <div class="container4 emptyfont">
-        <p>Empty Cart!
-    </div>
-}
-else
-{
-    
-}
+
 
 
 
@@ -185,56 +176,68 @@ else
 
 
 <div class="shopping-cart">
-    <div class="title">Shopping cart</div>
+    <div class="title" align="center">My Purchases</div>
+
+
 
     @foreach (var summariseMyPurchase in summariseMyPurchases)
     {
-        <div class="item">
-            @*product image*@
-            <div class="image">
-                <img src="/img/@(summariseMyPurchase.ProductId).png" width="100" height="100" />
-            </div>
-
-            @*Product name & description*@
-            <div class="description">
-                <span>@summariseMyPurchase.ProductName</span>
-                <span>@summariseMyPurchase.Timestamp</span>
-                <span>@summariseMyPurchase.Quantity</span>
-            </div>
-
-            @*Quantity*@
+<div class="item" style="height:150px;border-color:transparent">
+    @*product image*@
+    <div class="image" style="width:150px">
+        <img src="/img/@(summariseMyPurchase.ProductId).png" width="90" height="90" />
+    </div>
 
 
-            <div class="quantity">
 
-                <select>
-                    @foreach (var myPurchase in myPurchases)
-                    {
-                        @if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
-                        {
-                            <option>@myPurchase.ActivationCode</option>
-                        }
-                    }
-                </select>
+    @*Product name & description*@
+    <div class="description" style="width:200px">
+        <span>Product Name: @summariseMyPurchase.ProductName</span>
+        <span>Purchase Date: @summariseMyPurchase.Timestamp</span>
+        <span>Quantity: @summariseMyPurchase.Quantity</span>
+    </div>
 
-            </div>
 
-            @*<div class="quantity">
-                    <button class="quantity-btn" type="button" name="button">
-                        <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
-                    </button>
-                    <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
-                    <button class="quantity-btn" type="button" name="button">
-                        <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
-                    </button>
-                </div>*@
+
+    @*Quantity*@
 
 
 
 
-        </div>
+    <div class="quantity">
 
-    }
+
+
+        <select style="width:330px">
+            @foreach (var myPurchase in myPurchases)
+            {
+@if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
+{
+<option>@myPurchase.ActivationCode</option>}}
+        </select>
+
+
+
+    </div>
+
+
+
+    @*<div class="quantity">
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
+            </button>
+            <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
+            </button>
+        </div>*@
+
+
+
+
+
+
+</div>}
 </div>
 
 
