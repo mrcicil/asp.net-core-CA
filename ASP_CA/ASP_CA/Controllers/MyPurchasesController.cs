@@ -11,7 +11,6 @@ namespace ASP_CA.Controllers
 {
     public class MyPurchasesController : Controller
     {
-        
         public ActionResult Index()
         {
             ViewData["Name"] = Request.Cookies["Name"];
@@ -23,7 +22,5 @@ namespace ASP_CA.Controllers
             ViewData["SummariseMyPurchases"] = summariseMyPurchases;
             return View();
         }
-
-        
     }
 }

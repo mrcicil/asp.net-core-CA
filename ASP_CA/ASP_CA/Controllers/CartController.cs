@@ -40,7 +40,6 @@ namespace ASP_CA.Controllers
             CartData.RemoveInCart(productId);
             return RedirectToAction("Index", "Cart");
         }
-
         public IActionResult ClearCart()
         {
             CartData.ClearCart();

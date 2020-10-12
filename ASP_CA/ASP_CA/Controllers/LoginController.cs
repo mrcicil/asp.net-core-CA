@@ -27,7 +27,6 @@ namespace ASP_CA.Controllers
                 return RedirectToAction("Index", "Logout");
             }
         }
-
         public IActionResult Index1()
         {
             // to highlight "Login" as the selected menu-item
@@ -44,7 +43,6 @@ namespace ASP_CA.Controllers
                 return RedirectToAction("Index", "Logout");
             }
         }
-
         public IActionResult Authenticate(string username, string password)
         {
             List<User> userlists = UserData.GetUserInfo();
