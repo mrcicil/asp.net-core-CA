@@ -17,7 +17,7 @@
 
 @*<div class="btn">Quantity @ViewData["quantity"]</div>*@
 
-<div>Welcome @ViewData["greeting"]</div>
+<h1>Welcome @ViewData["greeting"]</h1>
 
 <div class="btn" style="float:right">
     <a class="material-icons" asp-area="" asp-controller="Cart" asp-action="Index">shopping_cart</a>
@@ -187,63 +187,78 @@
 </style>
 
 
-<div class="shopping-cart">
+<div class="shopping-cart" style="width:100%">
     <div style="position:relative">
         <div class="title">
-            Shopping cart <form id="form" style="float:right" action="/Gallery/Search" method="post">Search: <input name="search" /><input class="btn" type="submit" value="Search" /></form>
+            Gallery
+
+            <form id="form" style="float:right" action="/Gallery/Search" method="post">Search: <input name="search" /><input class="btn" type="submit" value="Search" /></form>
         </div>
 
 
 
-        <div class="item" style="width:100%; height:700px">
+        <div class="item" style="width:100%; height:450px">
             @foreach (var product in products)
             {@*product image*@
-                            <div class="image" style="width:160px">
-                                <img src="/img/@(product.ProductId).png" width="120" height="100" />
+            <div class="image" style="width:180px">
+                <img src="/img/@(product.ProductId).png" width="120" height="100" />
 
 
 
-                                @*Product name & description*@
-                                <div class="description" style="float:left;width:80px">
-                                    <span style="height:50px">@product.ProductName</span>
-                                    <span style="height:150px">@product.ProductDesc</span>
-                                    <span style="height:50px">$@product.ProductPrice</span>
-                                </div>
+
+
+                @*Product name & description*@
+                <div class="description" style="float:left;width:110px">
+                    <span style="height:50px">@product.ProductName</span>
+                    <span style="height:110px">@product.ProductDesc</span>
+                    <span style="height:30px">$@product.ProductPrice</span>
+                </div>
 
 
 
-                                <div class="quantity" style="float:left">
+
+
+                <div class="quantity" style="float:left">
 
 
 
-                                    <form id="form" action="/Gallery/Click" method="post">
-                                        <input type="hidden" name="productId" value="@product.ProductId" />
-                                        <input type="submit" value="Add To cart" style="width:120px;height:35px; background-color: darkgrey; color: white; font-weight: bold; border-radius: 12px;float:left" />
-                                    </form>
+
+
+                    <form id="form" action="/Gallery/Click" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <input type="submit" value="Add To cart" style="width:120px;height:35px; background-color: darkgrey; color: white; font-weight: bold; border-radius: 12px;float:left" />
+                    </form>
 
 
 
-                                </div>
+
+
+                </div>
 
 
 
-                            </div> @*Quantity*@ @*<div class="quantity">
-                                                    <button class="quantity-btn" type="button" name="button">
-                                                        <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
-                                                    </button>
-                                                    <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
-                                                    <button class="quantity-btn" type="button" name="button">
-                                                        <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
-                                                    </button>
-                                                </div>*@            }
+
+
+            </div> @*Quantity*@ @*<div class="quantity">
+                    <button class="quantity-btn" type="button" name="button">
+                        <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
+                    </button>
+                    <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
+                    <button class="quantity-btn" type="button" name="button">
+                        <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
+                    </button>
+                </div>*@}
         </div>
     </div>
-</div>
 
+
+
+</div>
 @if (ViewData["clearsearch"] != null)
 {
     <a class="btn" asp-area="" asp-controller="Gallery" asp-action="ClearSearch">Clear Search</a>
 }
+
 
 
 

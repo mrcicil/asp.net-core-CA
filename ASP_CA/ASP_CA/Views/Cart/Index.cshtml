@@ -215,25 +215,28 @@
 }
 else
 {
-    @if (total != 0)
-    {
-        @if (ViewData["Name"] == null)
-        {
-            <div class="btn" style="float:right">
-                <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
-            </div>
-        }
-        else
-        {
-            <div class="btn" style="float:right">
-                <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
-            </div>
-            }
-    }
+    
 
-                
+               <div></div> 
             <div class="shopping-cart">
-                <div class="title">Shopping cart</div>
+                <div class="title">
+                    Shopping cart
+                    @if (total != 0)
+                    {
+                        @if (ViewData["Name"] == null)
+                        {
+                            <div class="btn" style="float:right">
+                                <input class="btn" type="submit" value="Checkout" onclick="checkLogin()" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="btn" style="float:right">
+                                <a class="btn" onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+                            </div>
+                        }
+                    }
+                </div>
 
                 @foreach (var product in viewcart)
                 {
