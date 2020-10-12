@@ -17,13 +17,18 @@
 
 @*<div class="btn">Quantity @ViewData["quantity"]</div>*@
 
-<h1>Welcome @ViewData["greeting"]</h1>
+<div>
+    <span style="font-weight:bold;font-size:45px;line-height:40px;display:flex;justify-content:center">
+        Welcome @ViewData["greeting"]
 
-<div class="btn" style="float:right">
-    <a class="material-icons" asp-area="" asp-controller="Cart" asp-action="Index">shopping_cart</a>
-    @ViewData["quantity"]
+
+
+        <div class="btn" style="position:relative;left:25%">
+            <a class="material-icons" asp-area="" asp-controller="Cart" asp-action="Index">shopping_cart</a>
+            @ViewData["quantity"]
+        </div>
+    </span>
 </div>
-
 
 
 
