@@ -49,8 +49,8 @@ function onButton(event) {
         else {
             elem.parentElement.querySelector(".quantitylisted").setAttribute("value", total);
             elem.parentElement.querySelector(".quantitylisted").setAttribute("product_quantity", total);
-            elem.parentElement.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("product_total", price);
-            elem.parentElement.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("value", price);
+            elem.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("product_total", price);
+            elem.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("value", price);
             elem.parentElement.parentElement.parentElement.parentElement.querySelector(".quantitytotalprice").setAttribute("product_totalprice", grandtotal);
             elem.parentElement.parentElement.parentElement.parentElement.querySelector(".quantitytotalprice").setAttribute("value", grandtotal);
             sendAction(action, productId);
