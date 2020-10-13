@@ -25,14 +25,7 @@ namespace ASP_CA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            User user = new User
-            {
-                UserId = Guid.NewGuid().ToString(),
-                Username = "johndoe",
-                Password = "johndoe"
-            };
-            services.AddSingleton<User>(user);
-            services.AddSingleton<Sessions>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +52,7 @@ namespace ASP_CA
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=FirstPage}/{id?}");
             });
         }
     }

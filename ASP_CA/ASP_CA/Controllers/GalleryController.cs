@@ -12,30 +12,99 @@ namespace ASP_CA.Controllers
 {
     public class GalleryController : Controller
     {
-        
-
         public IActionResult Index()
         {
             List<Product> products = ProductData.GetAllProducts();
-
+          
             ViewData["products"] = products;
-
             ViewData["header"] = "on";
-            ViewData["sessionId"] = HttpContext.Request.Cookies["sessionId"];
-            return View();
+            ViewData["Name"] = Request.Cookies["Name"];  //logout view
+            int quantity = CartData.QuantityCart();
+            ViewData["quantity"] = quantity;
+            Response.Cookies.Delete("Fromcart");
+            Response.Cookies.Append("Fromgallery", "timer"); //enter this page when login
+            ViewData["LoginDisplay"] = "on";
+            if (ViewData["Name"] == null)
+            {
+                ViewData["greeting"] = "guest";
+                return View();
+            }
+            else
+            {
+                ViewData["greeting"] = Request.Cookies["Name"];
+                return View();
+            }
         }
-
-        public IActionResult Click()
+        [HttpPost]
+       public IActionResult Click([FromBody] JSONPro product)
         {
-
-            ViewData["products"] = null;
-            return View("Index");
+            CartData.AddToCart(product.productId);
+            if (Request.Cookies["searchedproducts"] == null)
+            {
+                Index();
+                //return View("Index");
+                return Json(new { status = "success" });
+            }
+            else
+            {
+                Search(Request.Cookies["searchedproducts"]);
+                //return View("Index");
+                return Json(new { status = "success" });
+            }
+                
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Search(string search)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            List<Product> products = ProductData.GetAllProducts();
+
+            List<Product> searchedproducts = new List<Product>();
+
+            if (search != null)
+            {
+                string lowersearch = (search.Trim()).ToLower();
+
+                foreach (var product in products)
+                {
+                    if (product.ProductName.ToLower().Contains(lowersearch) | product.ProductDesc.ToLower().Contains(lowersearch) | product.ProductPrice.ToString().ToLower().Contains(lowersearch))
+                    {
+                        searchedproducts.Add(product);
+                    }
+                }
+                ViewData["products"] = searchedproducts;
+                ViewData["clearsearch"] = "on";
+                Response.Cookies.Append("searchedproducts", search);
+                ViewData["header"] = "on";
+                ViewData["Name"] = Request.Cookies["Name"];
+                int quantity = CartData.QuantityCart();
+                ViewData["quantity"] = quantity;
+                ViewData["LoginDisplay"] = "on";
+                if (ViewData["Name"] == null)
+                {
+                    ViewData["greeting"] = "guest";
+                    return View("Index");
+                }
+                else
+                {
+                    ViewData["greeting"] = Request.Cookies["Name"];
+                    return View("Index");
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", "Gallery");
+            }
+            
+        }
+        public IActionResult ClearSearch()
+        {
+            Response.Cookies.Delete("searchedproducts");
+            return RedirectToAction("Index", "Gallery");
+        }
+        public IActionResult ClearCart()
+        {
+            CartData.ClearCart();
+            return RedirectToAction("Index", "Gallery");
         }
     }
 }
