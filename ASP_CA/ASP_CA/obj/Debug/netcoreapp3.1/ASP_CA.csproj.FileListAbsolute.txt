@@ -114,3 +114,367 @@ C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netco
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CoreCompileInputs.cache
 C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.exe
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.deps.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.dev.json
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csprojAssemblyReference.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfoInputs.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfo.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CoreCompileInputs.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.input.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.output.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorCoreGenerate.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Gallery\Index.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CopyComplete
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.Manifest.cache
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.xml
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.genruntimeconfig.cache
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index1.cshtml.g.cs
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\MyPurchases\Index.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\MyPurchases\Index.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs
+C:\Users\e0641583\Desktop\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index1.cshtml.g.cs
+C:\Users\e0641583\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.exe
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.deps.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.dev.json
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csprojAssemblyReference.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfo.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.input.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.output.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorCoreGenerate.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Gallery\Index.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index1.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\MyPurchases\Index.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cs
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CopyComplete
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.Manifest.cache
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.xml
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\User\Desktop\NUS-ISS\SA4102 Fundamentals\04 ASP.NET Core\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.exe
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.deps.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorAssemblyInfo.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.input.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.TagHelpers.output.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorCoreGenerate.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Gallery\Index.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\FirstPage.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index1.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\MyPurchases\Index.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.RazorTargetAssemblyInfo.cs
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.Views.pdb
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.Manifest.cache
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\staticwebassets\ASP_CA.StaticWebAssets.xml
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.dll
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.pdb
+C:\Users\User\Documents\GitHub\asp.net-core-CA\ASP_CA\ASP_CA\obj\Debug\netcoreapp3.1\ASP_CA.genruntimeconfig.cache

@@ -5,84 +5,68 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ASP_CA.Models;
+using ASP_CA.Data;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace ASP_CA.Controllers
 {
     public class CartController : Controller
     {
-        // GET: CartController
+
         public ActionResult Index()
         {
+            ViewData["Name"] = Request.Cookies["Name"];  //logout display
+            ViewData["AllTotalPrice"] = CartData.TotalPrice();
+            ViewData["ViewCart"] = CartData.ViewCart();
+            Response.Cookies.Delete("Fromgallery");
+            Response.Cookies.Delete("searchedproducts");
+            Response.Cookies.Append("Fromcart", "timer");  //enter this page when login
+            ViewData["LoginDisplay"] = "on";
             return View();
         }
-
-        // GET: CartController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: CartController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CartController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult PlusOne([FromBody] JSONPro product)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            CartData.PlusOneInCart(product.productId);
 
-        // GET: CartController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
+            return Json(new { status = "success" });
+            //return RedirectToAction("Index", "Cart");  
         }
-
-        // POST: CartController/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult MinusOne([FromBody] JSONPro product)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            CartData.MinusOneInCart(product.productId);
+            return Json(new { status = "success" });
+            //return RedirectToAction("Index", "Cart");
         }
-
-        // GET: CartController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: CartController/Delete/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Remove(string productId)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            CartData.RemoveInCart(productId);
+            return RedirectToAction("Index", "Cart");
         }
+        public IActionResult ClearCart()
+        {
+            CartData.ClearCart();
+            return RedirectToAction("Index", "Cart");
+        }
+        public IActionResult CheckOut()
+        {
+            int userId = Convert.ToInt32(Request.Cookies["userId"]);
+            List<CartProduct> cartProducts = CartData.ViewCart();
+
+
+            foreach(var cartProduct in cartProducts)
+            {
+                int quantity = cartProduct.ProductQuantity;
+                for (int i = 0; i < quantity; i++)
+                {
+                    CartData.CheckOut(userId, cartProduct);
+                }
+            }
+            CartData.ClearCart();
+            return RedirectToAction("Index", "MyPurchases");
+        }
+
     }
 }

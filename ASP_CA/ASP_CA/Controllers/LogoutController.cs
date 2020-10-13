@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASP_CA.Data;
 using ASP_CA.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,13 +10,14 @@ namespace ASP_CA.Controllers
 {
     public class LogoutController : Controller
     {
-        public IActionResult Index(Sessions sessions)
+        public IActionResult Index()
         {
-            
-            string sessionId = HttpContext.Request.Cookies["sessionId"];
-            sessions.map.Remove(sessionId);
-            HttpContext.Response.Cookies.Delete("sessionId");
-            return RedirectToAction("Index", "Gallery");
+            Response.Cookies.Delete("userId");
+            Response.Cookies.Delete("Name");
+            Response.Cookies.Delete("searchedproducts");
+            Response.Cookies.Delete("Fromcart");
+            CartData.ClearCart();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

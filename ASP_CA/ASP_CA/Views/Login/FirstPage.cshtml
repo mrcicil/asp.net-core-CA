@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Log in Page";
+}
+
+@section Scripts
+{
+    <script src="~/js/login/index.js"></script>
+}
+
+@*<style>
+    #err_msg {
+        color: red;
+        font-weight: bold;
+        padding: 10px;
+    }
+</style>
+
+<p></p>
+
+<form id="form" action="/Login/Authenticate" method="post">
+    <table align="center">
+        <tr>
+            <td>
+                Username:
+            </td>
+            <td>
+                <input id="username" name="username"
+                       class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input id="password" name="password"
+                       type="password" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <input id="submit" type="submit" class="btn btn-success" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <div id="err_msg">@ViewData["errMsg"]</div>
+            </td>
+        </tr>
+    </table>
+</form>*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #2EACF1;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 18%;
+            border-radius: 25%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        #err_msg {
+            color: red;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="/Login/Authenticate" method="post">
+        <div class="imgcontainer">
+            <img src="~/img/img_avatar.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </div>
+        <div id="err_msg">@ViewData["errMsg"]</div>
+    </form>
+
+</body>

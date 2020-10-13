@@ -1,0 +1,245 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var myPurchases = (List<MyPurchase>)ViewData["MyPurchases"];
+    var summariseMyPurchases = (List<SummariseMyPurchase>)ViewData["SummariseMyPurchases"];
+}
+
+<style>
+    div.container4 {
+        height: 10em;
+        position: relative
+    }
+
+        div.container4 p {
+            margin: 0;
+            background: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+    .btn {
+        background: white;
+    }
+</style>
+
+
+
+
+
+
+
+
+<style>
+    .shopping-cart {
+        width: 90%;
+        height: 30%;
+        margin: 80px auto;
+        background: #f5f2f2;
+        box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        height: 70px;
+        border-bottom: 1px solid #E1E8EE;
+        padding: 20px 30px;
+        color: #5E6977;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .item {
+        padding: 30px 50px;
+        height: 300px;
+        display: flex;
+    }
+
+        .item:nth-child(2) {
+            border-top: 1px solid #E1E8EE;
+            border-bottom: 1px solid #E1E8EE;
+        }
+
+    .image {
+        width: 280px;
+        height: 100%;
+    }
+
+    /*product name, description*/
+    .description {
+        padding-top: 10px;
+        margin-right: 60px;
+        width: 170px;
+        font-size: 12px;
+    }
+
+        .description span {
+            display: block;
+            font-size: 14px;
+            color: #43484D;
+            font-weight: 400;
+        }
+
+            .description span:first-child {
+                margin-bottom: 5px;
+            }
+
+            .description span:last-child {
+                font-weight: 300;
+                margin-top: 8px;
+                color: #86939E;
+            }
+
+    .quantity {
+        padding-top: 20px;
+        margin-right: 60px;
+    }
+
+        .quantity input {
+            -webkit-appearance: none;
+            border: none;
+            text-align: center;
+            width: 32px;
+            font-size: 16px;
+            color: #43484D;
+            font-weight: 300;
+        }
+
+    .quantity-btn img {
+        margin-top: 4px;
+        /*margin-bottom: 4px;*/
+        padding-top: 10px;
+    }
+
+    .itemPrice {
+        padding-top: 10px;
+        margin-right: 20px;
+        width: 50px;
+    }
+
+    .delete-btn {
+        display: inline-block;
+        Cursor: pointer;
+    }
+
+    /*button*/
+    .buttons {
+        padding-top: 10px;
+        margin-right: 10px;
+    }
+
+    button:focus,
+    input:focus {
+        outline: 0;
+    }
+
+    .total {
+        float: right;
+    }
+
+    .total-item {
+        float: right;
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    label {
+        float: left;
+        clear: both;
+        width: 79%;
+        text-align: right;
+    }
+
+    .total-value {
+        float: right;
+        width: 21%;
+        text-align: right;
+    }
+
+    .checkout-btn {
+        float: right;
+        font-size: 18px;
+    }
+
+    /*    .checkout-btn:hover {
+        background-color: #edd2be;
+    }*/
+
+</style>
+
+
+<div class="shopping-cart">
+    <div class="title" align="center">My Purchases</div>
+
+
+
+    @foreach (var summariseMyPurchase in summariseMyPurchases)
+    {
+<div class="item" style="height:150px;border-color:transparent">
+    @*product image*@
+    <div class="image" style="width:150px">
+        <img src="/img/@(summariseMyPurchase.ProductId).png" width="90" height="90" />
+    </div>
+
+
+
+    @*Product name & description*@
+    <div class="description" style="width:200px">
+        <span>Product Name: @summariseMyPurchase.ProductName</span>
+        <span>Purchase Date: @summariseMyPurchase.Timestamp</span>
+        <span>Quantity: @summariseMyPurchase.Quantity</span>
+    </div>
+
+
+
+    @*Quantity*@
+
+
+
+
+    <div class="quantity">
+
+
+
+        <select style="width:330px">
+            @foreach (var myPurchase in myPurchases)
+            {
+@if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
+{
+<option>@myPurchase.ActivationCode</option>}}
+        </select>
+
+
+
+    </div>
+
+
+
+    @*<div class="quantity">
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
+            </button>
+            <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
+            <button class="quantity-btn" type="button" name="button">
+                <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
+            </button>
+        </div>*@
+
+
+
+
+
+
+</div>}
+</div>
+
+
+
+

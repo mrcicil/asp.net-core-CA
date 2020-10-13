@@ -16,7 +16,7 @@ namespace ASP_CA.Data
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = @"SELECT Product.ProductName
+                string sql = @"SELECT Product.ProductId, Product.ProductName, Product.ProductDesc, Product.ProductPrice
                                 FROM Product";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -25,9 +25,10 @@ namespace ASP_CA.Data
                 {
                     Product product = new Product()
                     {
-                        
-                        ProductName = (string)reader["ProductName"]
-
+                        ProductId = (int)reader["ProductId"],
+                        ProductName = (string)reader["ProductName"],
+                        ProductDesc = (string)reader["ProductDesc"],
+                        ProductPrice = (int)reader["ProductPrice"]
                     };
                     products.Add(product);
                 }

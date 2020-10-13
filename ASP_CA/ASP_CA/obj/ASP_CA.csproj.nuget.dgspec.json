@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
+    "C:\\Users\\e0641583\\Desktop\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
+    "C:\\Users\\e0641583\\Desktop\\ASP_CA\\ASP_CA\\ASP_CA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "projectUniqueName": "C:\\Users\\e0641583\\Desktop\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
         "projectName": "ASP_CA",
-        "projectPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
+        "projectPath": "C:\\Users\\e0641583\\Desktop\\ASP_CA\\ASP_CA\\ASP_CA.csproj",
         "packagesPath": "C:\\Users\\e0641583\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e0641583\\Documents\\GitHub\\asp.net-core-CA\\ASP_CA\\ASP_CA\\obj\\",
+        "outputPath": "C:\\Users\\e0641583\\Desktop\\ASP_CA\\ASP_CA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\e0641583\\AppData\\Roaming\\NuGet\\NuGet.Config",

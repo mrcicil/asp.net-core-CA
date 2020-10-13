@@ -1,0 +1,311 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using  ASP_CA.Controllers
+@{
+    var viewcart = (List<CartProduct>)ViewData["ViewCart"];
+    int total = (int)ViewData["AllTotalPrice"];
+}
+<style>
+    table, th, tr {
+        border: 1px solid black;
+    }
+
+    .btn {
+        background: white;
+    }
+
+    div.container4 {
+        height: 10em;
+        position: relative
+    }
+
+        div.container4 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+    .emptyfont {
+        font-size: 40px
+    }
+
+    .btn {
+        background: white;
+    }
+</style>
+<script>
+    function checkLogin() {
+        alert('Please Log In');
+    }  @*login warning*@
+    function thankspurchase() {
+        alert('Thanks for purchase! Enjoy your day!!')
+    }   @*after purchase*@
+    function reachlowlimit() {
+        alert('Select remove if you want to delete the item')
+    }     @*minimum spedn*@
+</script>
+
+
+
+
+
+
+
+@{
+    @* ViewData["Title"] = "Cart";
+        List<Cart> cartItems = (List<Cart>)ViewData["cart"];*@
+}
+<style>
+    .shopping-cart {
+        width: 90%;
+        height: 30%;
+        margin: 80px auto;
+        background: #f5f2f2;
+        box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        height: 70px;
+        border-bottom: 1px solid #E1E8EE;
+        padding: 20px 30px;
+        color: #5E6977;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .item {
+        padding: 30px 50px;
+        height: 300px;
+        display: flex;
+    }
+
+        .item:nth-child(2) {
+            border-top: 1px solid #E1E8EE;
+            border-bottom: 1px solid #E1E8EE;
+        }
+
+    .image {
+        width: 280px;
+        height: 100%;
+    }
+
+    /*product name, description*/
+    .description {
+        padding-top: 10px;
+        margin-right: 60px;
+        width: 170px;
+        font-size: 12px;
+    }
+
+        .description span {
+            display: block;
+            font-size: 14px;
+            color: #43484D;
+            font-weight: 400;
+        }
+
+            .description span:first-child {
+                margin-bottom: 5px;
+            }
+
+            .description span:last-child {
+                font-weight: 300;
+                margin-top: 8px;
+                color: #86939E;
+            }
+
+    .quantity {
+        padding-top: 20px;
+        margin-right: 60px;
+    }
+
+    .quantity2 {
+        padding-top: 20px;
+        margin-right: 60px;
+    }
+
+        .quantity input {
+            -webkit-appearance: none;
+            border: none;
+            text-align: center;
+            width: 32px;
+            font-size: 16px;
+            color: #43484D;
+            font-weight: 300;
+        }
+
+    .quantity-btn img {
+        margin-top: 4px;
+        /*margin-bottom: 4px;*/
+        padding-top: 10px;
+    }
+
+    .quantity2-btn img {
+        margin-top: 4px;
+        /*margin-bottom: 4px;*/
+        padding-top: 10px;
+    }
+
+    .itemPrice {
+        padding-top: 10px;
+        margin-right: 20px;
+        width: 50px;
+    }
+
+    .delete-btn {
+        display: inline-block;
+        Cursor: pointer;
+    }
+
+    /*button*/
+    .buttons {
+        padding-top: 10px;
+        margin-right: 10px;
+    }
+
+    button:focus,
+    input:focus {
+        outline: 0;
+    }
+
+    .total {
+        float: right;
+    }
+
+    .total-item {
+        float: right;
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    label {
+        float: left;
+        clear: both;
+        width: 79%;
+        text-align: right;
+    }
+
+    .total-value {
+        float: right;
+        width: 21%;
+        text-align: right;
+    }
+
+    .checkout-btn {
+        float: right;
+        font-size: 18px;
+    }
+
+    /*    .checkout-btn:hover {
+        background-color: #edd2be;
+    }*/
+
+</style>
+
+
+@if (total == 0)
+{
+    <div class="container4 emptyfont">
+        <p>Empty Cart!
+    </div>
+
+    <div class="container4">
+        <form action="/Gallery/Index" method="post">
+            <p><input class="container4" type="submit" value="Continue Shopping" />
+        </form>
+    </div>
+}
+else
+{
+    <div class="shopping-cart">
+        <div class="title">
+            Shopping cart
+            @if (ViewData["Name"] != null)
+            {
+                <a asp-area="" asp-controller="MyPurchases" asp-action="Index">My Purchases</a>
+            }
+
+            @if (total != 0)
+            {
+                @if (ViewData["Name"] == null)
+                {
+                    <div style="float:right">
+                        <a onclick="checkLogin()" asp-area="" asp-controller="Cart" asp-action="Index">Checkout</a>
+                    </div>
+                }
+                else
+                {
+                    <div style="float:right">
+                        <a onclick="thankspurchase()" asp-area="" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+                    </div>
+                }
+            }
+        </div>
+
+        @foreach (var product in viewcart)
+        {
+            <div class="item" style="height:140px;border-color:transparent">
+
+                @*product image*@
+                <div class="image" style="width:20%">
+                    <img src="/img/@(product.ProductId).png" width="90" height="90" />
+                </div>
+
+                @*Product name & description*@
+                <div class="description" style="width:40%; vertical-align:top">
+                    <span>@product.ProductName</span>
+                    <span>@product.ProductDesc</span>
+                    <span>$@product.ProductPrice</span>
+                </div>
+
+                @*Quantity*@
+                <div class="quantity" style="width:20%">
+                    <button class="quantity-btn" name="plus_button" style="width:30px;float:left" product_id=@product.ProductId>+</button>
+                    <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" product_quantity="@product.ProductQuantity" class="quantitylisted" disabled/>
+                    <button class="quantity-btn" name="minus_button" style="width:30px;float:left" product_id=@product.ProductId>-</button>
+                 </div>
+
+                @*price*@
+                <div >
+                    <label style="width:100%; text-align:left; margin-top:10%">
+                        Price: $ <input type="text" name="quantity" style="width:30%;border-color:transparent;background-color:transparent" value="@product.ProductTotal" product_total="@product.ProductTotal" class="quantitytotal" disabled/>
+                    </label>
+                </div>
+
+                @*delete button*@
+                <div class="buttons">
+                    <form id="form" action="/Cart/Remove" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <button class="quantity-btn" name="remove" type="submit" style="width:80px;float:left" value="Remove">Remove</button>
+                    </form>
+                </div>
+            </div>
+        }
+        <div class="total" style="position:relative;left:10%;font-weight:bold">
+            <div class="total-item" >
+                <label style="text-align:right">
+                    Total: $ <input type="text" name="quantity" style="width:20%; border-color:transparent;background-color:transparent" value="@ViewData["AllTotalPrice"]" product_totalprice="@ViewData["AllTotalPrice"]" class="quantitytotalprice" disabled/>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="shopping-btn">
+        <form action="/Cart/ClearCart" method="post">
+            <input class="container4" type="submit" value="Clear Cart" />
+        </form>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/js/shared/index.js"></script>
+}
