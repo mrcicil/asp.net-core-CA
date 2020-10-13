@@ -251,78 +251,44 @@ else
             }
         </div>
 
-            @foreach (var product in viewcart)
-            {
-    <div class="item" style="height:140px;border-color:transparent">
-
-        @*product image*@
-        <div class="image" style="width:20%">
-            <img src="/img/@(product.ProductId).png" width="90" height="90" />
-        </div>
-
-        @*Product name & description*@
-        <div class="description" style="width:40%; vertical-align:top">
-            <span>@product.ProductName</span>
-            <span>@product.ProductDesc</span>
-            <span>$@product.ProductPrice</span>
-        </div>
-
-        @*Quantity*@
-    <div class="quantity" style="width:20%">
-
-        <button class="quantity-btn" name="plus_button" style="width:30px;float:left" product_id=@product.ProductId>+</button>
-        <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" product_quantity="@product.ProductQuantity" class="quantitylisted" />
-        <button class="quantity-btn" name="minus_button" style="width:30px;float:left" product_id=@product.ProductId>-</button>
-        
-
-        @*<form id="form" action="/Cart/PlusOne" method="post">
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="+">+</button>
-        </form>
-        <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" />
-
-        @if (product.ProductQuantity > 1)
+        @foreach (var product in viewcart)
         {
-            <form id="form" action="/Cart/MinusOne" method="post">
-                <input type="hidden" name="productId" value="@product.ProductId" />
-                <button class="quantity-btn" style="width:30px;float:left" type="submit" name="button" value="-">-</button>
-            </form>
-        }
-        else
-        {
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <button class="quantity-btn" style="width:30px;float:left" type="submit" onclick="reachlowlimit()" name="button" value="-">-</button>
-        }*@
-    </div>
+            <div class="item" style="height:140px;border-color:transparent">
 
-        @*<div class="quantity">
-                <button class="quantity-btn" type="button" name="button">
-                    <i class="material-icons" style="font-size:24px;">add_circle_outline</i>
-                </button>
-                <input type="text" name="quantity" value="1" min="1" style="width: 30px;" />
-                <button class="quantity-btn" type="button" name="button">
-                    <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
-                </button>
-        </div>*@
-  
-        @*price*@
-    <div >
-        <label style="width:100%; text-align:left; margin-top:10%">
-            Price: $ <input type="text" name="quantity" style="width:20%;border-color:transparent;background-color:transparent" value="@product.ProductTotal" product_total="@product.ProductTotal" class="quantitytotal" />
-        </label>
-    </div>
-        @*delete button*@
-    <div class="buttons">
-      
-        <form id="form" action="/Cart/Remove" method="post">
-            <input type="hidden" name="productId" value="@product.ProductId" />
-            <button class="quantity-btn" name="remove" type="submit" style="width:80px;float:left" value="Remove">Remove</button>
-        </form>
-        @*<button class="delete-btn" type="button" name="button">
-            <i class="material-icons" style="font-size:24px;">delete</i>
-        </button>*@
-    </div>
-    </div>
+                @*product image*@
+                <div class="image" style="width:20%">
+                    <img src="/img/@(product.ProductId).png" width="90" height="90" />
+                </div>
+
+                @*Product name & description*@
+                <div class="description" style="width:40%; vertical-align:top">
+                    <span>@product.ProductName</span>
+                    <span>@product.ProductDesc</span>
+                    <span>$@product.ProductPrice</span>
+                </div>
+
+                @*Quantity*@
+                <div class="quantity" style="width:20%">
+                    <button class="quantity-btn" name="plus_button" style="width:30px;float:left" product_id=@product.ProductId>+</button>
+                    <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" product_quantity="@product.ProductQuantity" class="quantitylisted" />
+                    <button class="quantity-btn" name="minus_button" style="width:30px;float:left" product_id=@product.ProductId>-</button>
+                 </div>
+
+                @*price*@
+                <div >
+                    <label style="width:100%; text-align:left; margin-top:10%">
+                        Price: $ <input type="text" name="quantity" style="width:20%;border-color:transparent;background-color:transparent" value="@product.ProductTotal" product_total="@product.ProductTotal" class="quantitytotal" />
+                    </label>
+                </div>
+
+                @*delete button*@
+                <div class="buttons">
+                    <form id="form" action="/Cart/Remove" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <button class="quantity-btn" name="remove" type="submit" style="width:80px;float:left" value="Remove">Remove</button>
+                    </form>
+                </div>
+            </div>
         }
         <div class="total" style="position:relative;left:10%;font-weight:bold">
             <div class="total-item" >

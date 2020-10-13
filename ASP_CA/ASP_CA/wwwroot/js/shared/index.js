@@ -11,7 +11,7 @@ function onButton(event) {
     let productId = elem.getAttribute("product_id");
     let product_quantity = elem.parentElement.parentElement.querySelector(".quantitylisted").getAttribute("product_quantity");
     let quantity = parseInt(product_quantity);
-    let product_price = elem.parentElement.parentElement.parentElement.querySelector(".quantitytotal").getAttribute("product_total");
+    let product_price = elem.parentElement.parentElement.querySelector(".quantitytotal").getAttribute("product_total");
     let totalprice = parseInt(product_price);
     let unitprice = totalprice / quantity;
 
@@ -24,8 +24,8 @@ function onButton(event) {
         elem.parentElement.querySelector(".quantitylisted").setAttribute("value", total);
         elem.parentElement.querySelector(".quantitylisted").setAttribute("product_quantity", total);
 
-        elem.parentElement.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("product_total", price);
-        elem.parentElement.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("value", price);
+        elem.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("product_total", price);
+        elem.parentElement.parentElement.querySelector(".quantitytotal").setAttribute("value", price);
 
         let grandtotal = parseInt(totalproductprice) + unitprice; 
 
