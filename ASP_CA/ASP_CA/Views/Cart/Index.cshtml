@@ -253,22 +253,22 @@ else
 
             @foreach (var product in viewcart)
             {
-    <div class="item" style="height:130px;border-color:transparent">
+    <div class="item" style="height:140px;border-color:transparent">
 
         @*product image*@
-        <div class="image" style="width:130px">
-            <img src="/img/@(product.ProductId).png" width="80" height="80" />
+        <div class="image" style="width:20%">
+            <img src="/img/@(product.ProductId).png" width="90" height="90" />
         </div>
 
         @*Product name & description*@
-        <div class="description" style="width:350px">
+        <div class="description" style="width:40%; vertical-align:top">
             <span>@product.ProductName</span>
             <span>@product.ProductDesc</span>
             <span>$@product.ProductPrice</span>
         </div>
 
         @*Quantity*@
-    <div class="quantity" style="width:100px">
+    <div class="quantity" style="width:20%">
 
         <button class="quantity-btn" name="plus_button" style="width:30px;float:left" product_id=@product.ProductId>+</button>
         <input type="text" name="quantity" style="width: 30px;float:left" value="@product.ProductQuantity" product_quantity="@product.ProductQuantity" class="quantitylisted" />
@@ -304,10 +304,13 @@ else
                     <i class="material-icons" style="font-size:24px;">remove_circle_outline</i>
                 </button>
         </div>*@
-
+  
         @*price*@
-        <div class="itemPrice"><p>$@product.ProductTotal</p></div>
-
+    <div >
+        <label style="width:100%; text-align:left; margin-top:10%">
+            Price: $ <input type="text" name="quantity" style="width:20%;border-color:transparent;background-color:transparent" value="@product.ProductTotal" product_total="@product.ProductTotal" class="quantitytotal" />
+        </label>
+    </div>
         @*delete button*@
     <div class="buttons">
       
@@ -322,8 +325,10 @@ else
     </div>
         }
         <div class="total" style="position:relative;left:10%;font-weight:bold">
-            <div class="total-item">
-                <label>Total: $@ViewData["AllTotalPrice"]</label>
+            <div class="total-item" >
+                <label style="text-align:right">
+                    Total: $ <input type="text" name="quantity" style="width:20%; border-color:transparent;background-color:transparent" value="@ViewData["AllTotalPrice"]" product_totalprice="@ViewData["AllTotalPrice"]" class="quantitytotalprice" />
+                </label>
             </div>
         </div>
     </div>
