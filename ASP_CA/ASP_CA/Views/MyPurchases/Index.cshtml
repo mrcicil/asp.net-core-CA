@@ -199,25 +199,18 @@
 
 
 
-    @*Quantity*@
-
-
-
+    @*Activation code*@
 
     <div class="quantity">
-
-
-
+        <p>Activation code:</p>
         <select style="width:330px">
             @foreach (var myPurchase in myPurchases)
             {
-@if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
-{
-<option>@myPurchase.ActivationCode</option>}}
+                @if (myPurchase.ProductName == summariseMyPurchase.ProductName && myPurchase.TimeStamp == summariseMyPurchase.Timestamp)
+                {
+                    <option>@myPurchase.ActivationCode</option>
+                }}
         </select>
-
-
-
     </div>
 
 

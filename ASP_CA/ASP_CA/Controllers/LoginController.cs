@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASP_CA.Models;
 using ASP_CA.Data;
+using ASP_CA.Common;
 
 namespace ASP_CA.Controllers
 {
@@ -48,7 +49,9 @@ namespace ASP_CA.Controllers
         {
             List<User> userlists = UserData.GetUserInfo();
             User user = new User();
-            
+
+            var encryptedPw = ScrambleMethod.ToEncrypt(password);
+
             foreach (User u in userlists)
             {
                 if (username == u.Username)
@@ -59,7 +62,7 @@ namespace ASP_CA.Controllers
                     user.UserId = u.UserId;
                 }
             }
-            if (username != user.Username || password != user.Password )
+            if (username != user.Username || encryptedPw != user.Password )
             {
                 // to highlight "Login" as the selected menu-item
                 ViewData["Is_Login"] = "menu_hilite";
