@@ -17,7 +17,7 @@ namespace ASP_CA.Data
             {
                 conn.Open();
                 string sql = @"SELECT ProductId, ProductName, Timestamp, ActivationCode
-                                FROM Order1 where UserId = " + UserId + " order by ProductName,Timestamp";
+                                FROM Order1 where UserId = " + UserId + " order by Timestamp desc";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -46,7 +46,7 @@ namespace ASP_CA.Data
                 conn.Open();
                 string sql = @"select ProductId, ProductName, Timestamp, Count(*) as Quantity
                                 from Order1
-                                where UserId = " + userId + "group by productid, productname, timestamp";
+                                where UserId = " + userId + "group by productid, productname, timestamp order by timestamp desc";
                                 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
